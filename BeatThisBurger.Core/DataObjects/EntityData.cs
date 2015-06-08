@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 
+// ReSharper disable once CheckNamespace - Needs to match server namespace for consistency
 namespace Microsoft.Azure.Mobile.Server
 {
     public class EntityData// : MvxNotifyPropertyChanged

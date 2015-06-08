@@ -6,9 +6,10 @@
     <SharedGUID>ba515146-15b9-46a5-a0f1-776485ea5d29</SharedGUID>
   </PropertyGroup>
   <PropertyGroup Label="Configuration">
-    <Import_RootNamespace>BeatThisBurger.Shared</Import_RootNamespace>
+    <Import_RootNamespace>BeatThisBurger</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Constants.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)DataObjects\TodoItem.cs" />
   </ItemGroup>
 </Project>
