@@ -1,17 +1,157 @@
-<views:MvxWindowsPage
-    x:Class="BeatThisBurger.Views.FirstView"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:views="using:Cirrious.MvvmCross.WindowsCommon.Views"
-    mc:Ignorable="d">
+<views:MvxWindowsPage x:Class="BeatThisBurger.Views.FirstView"
+                      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                      xmlns:views="using:Cirrious.MvvmCross.WindowsCommon.Views"
+                      mc:Ignorable="d">
+    <views:MvxWindowsPage.Resources>
+        <DataTemplate x:Key="BurgerTemplate">
+            <Grid Height="110"
+                  Width="480"
+                  Margin="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Border Background="{StaticResource ListViewItemPlaceholderBackgroundThemeBrush}"
+                        Width="110"
+                        Height="110">
+                    <Image Height="110"
+                           Width="110" />
+                </Border>
+                <StackPanel Grid.Column="1"
+                            Margin="10,0,0,0">
+                    <TextBlock Text="{Binding Id}"
+                               Style="{StaticResource TitleTextBlockStyle}" />
+                    <TextBlock Text="{Binding Ingredients}"
+                               Style="{StaticResource CaptionTextBlockStyle}"
+                               TextWrapping="NoWrap" />
+                </StackPanel>
+            </Grid>
+        </DataTemplate>
+        <DataTemplate x:Key="PlaceTemplate">
+            <Grid Height="110"
+                  Width="480"
+                  Margin="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Border Background="{StaticResource ListViewItemPlaceholderBackgroundThemeBrush}"
+                        Width="110"
+                        Height="110">
+                    <Image Height="110"
+                           Width="110" />
+                </Border>
+                <StackPanel Grid.Column="1"
+                            Margin="10,0,0,0">
+                    <TextBlock Text="{Binding Address}"
+                               Style="{StaticResource TitleTextBlockStyle}" />
+                    <TextBlock Text="{Binding Id}"
+                               Style="{StaticResource CaptionTextBlockStyle}"
+                               TextWrapping="NoWrap" />
+                </StackPanel>
+            </Grid>
+        </DataTemplate>
+    </views:MvxWindowsPage.Resources>
 
-    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
-        <StackPanel>
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}"
+          d:DataContext="{d:DesignData /SampleData/FirstViewModelSampleData.xaml}">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="SortStates">
+                <VisualState x:Name="Places">
+                    <VisualState.Setters>
+                        <Setter Target="LV_Places.(UIElement.Visibility)"
+                                Value="Visible" />
+                    </VisualState.Setters>
+
+                </VisualState>
+                <VisualState x:Name="Burgers">
+                    <VisualState.Setters>
+                        <Setter Target="LV_Burgers.(UIElement.Visibility)"
+                                Value="Visible" />
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="Default" />
+            </VisualStateGroup>
+            <VisualStateGroup x:Name="LayoutStates">
+                <VisualState x:Name="Minimal">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0"
+                                         MinWindowHeight="0" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="B_Expand.(UIElement.Visibility)"
+                                Value="Visible" />
+                    </VisualState.Setters>
+                </VisualState>
+
+
+                <VisualState x:Name="Normal">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="360"
+                                         MinWindowHeight="0" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="SV_Menu.(SplitView.DisplayMode)"
+                                Value="CompactOverlay" />
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="Wide">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="720"
+                                         MinWindowHeight="0" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="SV_Menu.(SplitView.DisplayMode)"
+                                Value="Inline" />
+                        <Setter Target="SV_Menu.(SplitView.IsPaneOpen)"
+                                Value="true" />
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        <SplitView x:Name="SV_Menu"
+                   DisplayMode="Overlay">
+            <SplitView.Pane>
+                <StackPanel x:Name="SP_Sort"
+                            RelativePanel.AlignLeftWithPanel="true"
+                            Width="200">
+                    <RadioButton Checked="SortChanged">Places</RadioButton>
+                    <RadioButton Checked="SortChanged">Burgers</RadioButton>
+                </StackPanel>
+            </SplitView.Pane>
+            <RelativePanel>
+                <ListView x:Name="LV_Burgers"
+                          Visibility="Collapsed"
+                          RelativePanel.AlignTopWithPanel="true"
+                          RelativePanel.AlignRightWithPanel="true"
+                          RelativePanel.Above="BTN_NewBurger"
+                          Background="#FF18FF00"
+                          ItemTemplate="{StaticResource BurgerTemplate}"
+                          ItemsSource="{Binding Burgers}" />
+                <ListView x:Name="LV_Places"
+                          Visibility="Collapsed"
+                          RelativePanel.AlignTopWithPanel="true"
+                          RelativePanel.AlignRightWithPanel="true"
+                          RelativePanel.Above="BTN_NewBurger"
+                          Background="Red"
+                          ItemTemplate="{StaticResource PlaceTemplate}"
+                          ItemsSource="{Binding Places}" />
+                <Button x:Name="BTN_NewBurger"
+                        RelativePanel.AlignBottomWithPanel="true"
+                        RelativePanel.AlignHorizontalCenterWithPanel="true"
+                        Click="{x:Bind Data.ViewModel.RecordNewBurger}">Add Burger</Button>
+                <Button x:Name="B_Expand"
+                        Click="ButtonBase_OnClick"
+                        Content="Expand" />
+            </RelativePanel>
+        </SplitView>
+        <!--<StackPanel>
             <TextBox Text="{Binding Hello, Mode=TwoWay}" />
             <TextBlock Text="{Binding Hello}" />
-            <Button Click="{x:Bind Data.ViewModel.RecordNewBurger}"/>
-        </StackPanel>
+            <Button Click="{x:Bind Data.ViewModel.RecordNewBurger}">Add Burger</Button>
+        </StackPanel>-->
     </Grid>
 </views:MvxWindowsPage>

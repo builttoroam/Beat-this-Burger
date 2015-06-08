@@ -7,8 +7,94 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:views="using:Cirrious.MvvmCross.WindowsCommon.Views"
     mc:Ignorable="d">
+    <views:MvxWindowsPage.Resources>
+        <Style x:Key="FormTextStyle" TargetType="TextBlock">
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="Height" Value="40"/>
+        </Style>
+    </views:MvxWindowsPage.Resources>
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" d:DataContext="{d:DesignData /SampleData/NewBurgerViewModelSampleData.xaml}">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="LayoutStates">
+                <VisualState x:Name="Narrow">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0"
+                                         MinWindowHeight="0" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+
+                        <Setter Target="B_Save.(RelativePanel.AlignLeftWithPanel)"
+                                Value="true" />
+                        <Setter Target="B_Cancel.(RelativePanel.RightOf)"
+                                Value="B_Save" />
+                        <Setter Target="B_Save.(RelativePanel.LeftOf)"
+                                Value="{x:Null}" />
+                        <Setter Target="TB_Place.(RelativePanel.RightOf)" Value="{x:Null}" />
+                        <Setter Target="TB_Address.(RelativePanel.RightOf)" Value="{x:Null}" />
+                        <Setter Target="TB_Burger.(RelativePanel.RightOf)" Value="{x:Null}" />
+                        <Setter Target="TB_Ingredients.(RelativePanel.RightOf)" Value="{x:Null}" />
+                        <Setter Target="S_Rating.(RelativePanel.RightOf)" Value="{x:Null}" />
+
+                        <Setter Target="TB_Place.(RelativePanel.Below)" Value="T_Place" />
+                        <Setter Target="TB_Address.(RelativePanel.Below)" Value="T_Address" />
+                        <Setter Target="TB_Burger.(RelativePanel.Below)" Value="T_Burger" />
+                        <Setter Target="TB_Ingredients.(RelativePanel.Below)" Value="T_Ingredients" />
+                        <Setter Target="S_Rating.(RelativePanel.Below)" Value="T_Rating" />
+
+                        <Setter Target="TB_Place.(RelativePanel.AlignRightWithPanel)" Value="true" />
+                        <Setter Target="TB_Address.(RelativePanel.AlignRightWithPanel)" Value="true" />
+                        <Setter Target="TB_Burger.(RelativePanel.AlignRightWithPanel)" Value="true" />
+                        <Setter Target="TB_Ingredients.(RelativePanel.AlignRightWithPanel)" Value="true" />
+                        <Setter Target="S_Rating.(RelativePanel.AlignRightWithPanel)" Value="true" />
+
+                        <Setter Target="TB_Place.(RelativePanel.AlignLeftWithPanel)" Value="true" />
+                        <Setter Target="TB_Address.(RelativePanel.AlignLeftWithPanel)" Value="true" />
+                        <Setter Target="TB_Burger.(RelativePanel.AlignLeftWithPanel)" Value="true" />
+                        <Setter Target="TB_Ingredients.(RelativePanel.AlignLeftWithPanel)" Value="true" />
+                        <Setter Target="S_Rating.(RelativePanel.AlignLeftWithPanel)" Value="true" />
+
+                        <Setter Target="TB_Place.Width" Value="Auto" />
+                        <Setter Target="TB_Address.Width" Value="Auto" />
+                        <Setter Target="TB_Burger.Width" Value="Auto" />
+                        <Setter Target="TB_Ingredients.Width" Value="Auto" />
+                        <Setter Target="S_Rating.Width" Value="Auto" />
+
+
+                        <Setter Target="T_Address.(RelativePanel.Below)" Value="TB_Place" />
+                        <Setter Target="T_Burger.(RelativePanel.Below)" Value="TB_Address" />
+                        <Setter Target="T_Ingredients.(RelativePanel.Below)" Value="TB_Burger" />
+                        <Setter Target="T_Rating.(RelativePanel.Below)" Value="TB_Ingredients" />
+
+
+                        <Setter Target="B_Save.(RelativePanel.Below)" Value="S_Rating" />
+                        <Setter Target="B_Cancel.(RelativePanel.Below)" Value="S_Rating" />
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="Wide">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="720"
+                                         MinWindowHeight="0" />
+                    </VisualState.StateTriggers>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        <RelativePanel>
+            <TextBlock x:Name="T_Place"  Text="Place" Style="{StaticResource FormTextStyle}"/>
+            <TextBlock x:Name="T_Address" Text="Address" Style="{StaticResource FormTextStyle}" RelativePanel.Below="T_Place" />
+            <TextBlock x:Name="T_Burger" Text="Burger Name"  Style="{StaticResource FormTextStyle}" RelativePanel.Below="T_Address"/>
+            <TextBlock x:Name="T_Ingredients" Text="Ingredients"  Style="{StaticResource FormTextStyle}" RelativePanel.Below="T_Burger"/>
+            <TextBlock x:Name="T_Rating" Text="Rating" Style="{StaticResource FormTextStyle}" RelativePanel.Below="T_Ingredients"/>
+
+
+            <TextBox x:Name="TB_Place"  Text="{Binding Place.Name, Mode=TwoWay}" RelativePanel.RightOf="T_Place" Width="400"/>
+            <TextBox x:Name="TB_Address" Text="{Binding Place.Address, Mode=TwoWay}" RelativePanel.RightOf="T_Place" RelativePanel.Below="T_Place" Width="400"/>
+            <TextBox x:Name="TB_Burger"  Text="{Binding Burger.Name, Mode=TwoWay}" RelativePanel.RightOf="T_Place" RelativePanel.Below="T_Address" Width="400"/>
+            <TextBox x:Name="TB_Ingredients"  Text="{Binding Burger.Ingredients, Mode=TwoWay}" RelativePanel.RightOf="T_Place" RelativePanel.Below="T_Burger" Width="400"/>
+            <Slider x:Name="S_Rating" Maximum="5" Minimum="0" SmallChange="0.5" LargeChange="1" Value="{Binding Rating.Value}"  RelativePanel.RightOf="T_Place" RelativePanel.Below="T_Ingredients" Width="400"/>
+            <Button x:Name="B_Save"  Content="Save" Click="{x:Bind Data.ViewModel.SaveBurger}"  RelativePanel.Below="T_Rating" RelativePanel.LeftOf="B_Cancel" Margin="20,0"/>
+            <Button Content="Cancel" Click="{x:Bind Data.ViewModel.CancelBurger}"  RelativePanel.Below="T_Rating" RelativePanel.RightOf="T_Place" x:Name="B_Cancel"/>
+        </RelativePanel>
 
     </Grid>
 </views:MvxWindowsPage>

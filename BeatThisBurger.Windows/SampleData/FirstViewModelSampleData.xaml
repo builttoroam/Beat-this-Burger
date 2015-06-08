@@ -1,0 +1,909 @@
+﻿<ViewModels:FirstViewModel xmlns:ViewModels="using:BeatThisBurger.ViewModels" xmlns:DataObjects="using:BeatThisBurger.DataObjects" xmlns:System="using:System" xmlns:ViewModels1="using:Cirrious.MvvmCross.ViewModels">
+	<ViewModels:FirstViewModel.Burgers>
+		<DataObjects:Burger Deleted="True" Id="Orci lorem volutpat parturient ligula" Ingredients="Massa iaculis lacinia primis" Name="Parturient magna nunc vestibulum" PlaceId="Bibendum gravida dictumst platea">
+			<DataObjects:Burger.Place>
+				<DataObjects:Place Address="Adipiscing rutrum" Deleted="False" Id="Placerat pulvinar urna" Name="Laoreet vestibulum">
+					<DataObjects:Place.Burgers>
+						<DataObjects:Burger Deleted="True" Id="Natoque posuere taciti potenti" Ingredients="Vestibulum vestibulum imperdiet" Name="Semper sociis odio" PlaceId="Eleifend parturient sapien sem"/>
+						<DataObjects:Burger Deleted="False" Id="Tempor tempus tortor" Ingredients="Penatibus porttitor orci" Name="Sodales malesuada facilisi tellus" PlaceId="Pretium rhoncus sit vel adipiscing"/>
+						<DataObjects:Burger Deleted="True" Id="Morbi neque netus habitant varius" Ingredients="Viverra tincidunt" Name="Parturient sed dis metus turpis" PlaceId="Faucibus nam"/>
+						<DataObjects:Burger Deleted="False" Id="Adipiscing vivamus aliquam" Ingredients="Nulla integer vestibulum porta quisque" Name="Lobortis vestibulum hac" PlaceId="Est inceptos interdum aliquam"/>
+						<DataObjects:Burger Deleted="True" Id="Quam leo vestibulum quis" Ingredients="Blandit velit" Name="Tristique aliquet pede nascetur pharetra" PlaceId="Purus risus parturient"/>
+					</DataObjects:Place.Burgers>
+					<DataObjects:Place.Version>
+						<System:Byte/>
+						<System:Byte/>
+						<System:Byte/>
+						<System:Byte/>
+						<System:Byte/>
+					</DataObjects:Place.Version>
+				</DataObjects:Place>
+			</DataObjects:Burger.Place>
+			<DataObjects:Burger.Ratings>
+				<DataObjects:Rating BurgerId="Mus vitae class" Deleted="False" Id="Parturient donec dapibus">
+					<DataObjects:Rating.Burger>
+						<DataObjects:Burger Deleted="True" Id="Adipiscing per aptent" Ingredients="Vestibulum senectus cubilia nullam" Name="Aenean curae mauris conubia" PlaceId="Nec non commodo sagittis"/>
+					</DataObjects:Rating.Burger>
+				</DataObjects:Rating>
+				<DataObjects:Rating BurgerId="Cras duis etiam sed" Deleted="False" Id="Arcu vulputate morbi cursus diam">
+					<DataObjects:Rating.Burger>
+						<DataObjects:Burger Deleted="True" Id="Amet auctor euismod ante congue" Ingredients="Venenatis lorem" Name="Egestas ultricies sem sit" PlaceId="Nunc fusce"/>
+					</DataObjects:Rating.Burger>
+				</DataObjects:Rating>
+				<DataObjects:Rating BurgerId="Curabitur eget phasellus" Deleted="False" Id="Parturient proin enim torquent erat">
+					<DataObjects:Rating.Burger>
+						<DataObjects:Burger Deleted="True" Id="Adipiscing nam" Ingredients="Nulla suscipit vestibulum vel" Name="Sociosqu elementum" PlaceId="Consequat convallis dignissim elit vestibulum"/>
+					</DataObjects:Rating.Burger>
+				</DataObjects:Rating>
+				<DataObjects:Rating BurgerId="Augue facilisis feugiat gravida" Deleted="False" Id="Fames felis lacinia">
+					<DataObjects:Rating.Burger>
+						<DataObjects:Burger Deleted="True" Id="Dictum nisi" Ingredients="Nibh vestibulum" Name="Iaculis dolor eros dis" PlaceId="Sed fermentum fringilla"/>
+					</DataObjects:Rating.Burger>
+				</DataObjects:Rating>
+				<DataObjects:Rating BurgerId="Ultrices vehicula nisl" Deleted="False" Id="Adipiscing posuere lacus">
+					<DataObjects:Rating.Burger>
+						<DataObjects:Burger Deleted="True" Id="Hac habitasse" Ingredients="Odio libero" Name="Laoreet lectus natoque nunc justo" PlaceId="Ipsum vestibulum est"/>
+					</DataObjects:Rating.Burger>
+				</DataObjects:Rating>
+			</DataObjects:Burger.Ratings>
+			<DataObjects:Burger.Version>
+				<System:Byte/>
+				<System:Byte/>
+				<System:Byte/>
+				<System:Byte/>
+				<System:Byte/>
+			</DataObjects:Burger.Version>
+		</DataObjects:Burger>
+		<DataObjects:Burger Deleted="False" Id="Maecenas adipiscing tincidunt" Ingredients="Himenaeos accumsan imperdiet luctus vestibulum" Name="Potenti leo praesent hendrerit" PlaceId="Magna litora maecenas pede">
+			<DataObjects:Burger.Place>
+				<DataObjects:Place Address="Malesuada pretium adipiscing bibendum" Deleted="True" Id="Parturient porta platea" Name="Mus vestibulum">
+					<DataObjects:Place.Burgers>
+						<DataObjects:Burger Deleted="False" Id="Quam vestibulum" Ingredients="Parturient penatibus porttitor" Name="Non magnis" PlaceId="Massa rhoncus metus nec dictumst"/>
+						<DataObjects:Burger Deleted="True" Id="Sodales viverra eleifend aliquam venenatis" Ingredients="Vestibulum mattis ultricies mauris" Name="Adipiscing morbi parturient" PlaceId="Tincidunt tristique quis vestibulum"/>
+						<DataObjects:Burger Deleted="False" Id="Per mollis parturient" Ingredients="Adipiscing aliquam vulputate" Name="Vivamus neque" PlaceId="Vestibulum integer quisque"/>
+						<DataObjects:Burger Deleted="True" Id="Sit vel montes inceptos nam" Ingredients="Aliquet habitant" Name="Vestibulum facilisi faucibus vestibulum" PlaceId="Sed urna sem curabitur"/>
+						<DataObjects:Burger Deleted="False" Id="Nulla conubia lobortis" Ingredients="Dis ornare commodo adipiscing netus" Name="Interdum nostra" PlaceId="Cras blandit sed"/>
+					</DataObjects:Place.Burgers>
+					<DataObjects:Place.Version>
+						<System:Byte/>
+						<System:Byte/>
+						<System:Byte/>
+						<System:Byte/>
+						<System:Byte/>
+					</DataObjects:Place.Version>
+				</DataObjects:Place>
+			</DataObjects:Burger.Place>
+			<DataObjects:Burger.Ratings>
+				<DataObjects:Rating BurgerId="Vestibulum primis" Deleted="True" Id="Dignissim adipiscing elementum vitae parturient">
+					<DataObjects:Rating.Burger>
+						<DataObjects:Burger Deleted="False" Id="Rutrum hac vestibulum velit" Ingredients="Nascetur vestibulum est convallis" Name="Risus vestibulum cubilia adipiscing parturient" PlaceId="Purus phasellus consequat"/>
+					</DataObjects:Rating.Burger>
+				</DataObjects:Rating>
+				<DataObjects:Rating BurgerId="Vestibulum dapibus" Deleted="True" Id="Amet facilisis ante vestibulum">
+					<DataObjects:Rating.Burger>
+						<DataObjects:Burger Deleted="False" Id="Class curae nunc pharetra" Ingredients="Leo mus nec" Name="Euismod feugiat" PlaceId="Egestas duis"/>
+					</DataObjects:Rating.Burger>
+				</DataObjects:Rating>
+				<DataObjects:Rating BurgerId="Gravida iaculis fermentum lacinia" Deleted="True" Id="Semper eget lorem elit">
+					<DataObjects:Rating.Burger>
+						<DataObjects:Burger Deleted="False" Id="Potenti pretium sapien" Ingredients="Posuere etiam diam fusce" Name="Fringilla arcu" PlaceId="Donec laoreet natoque non"/>
+					</DataObjects:Rating.Burger>
+				</DataObjects:Rating>
+				<DataObjects:Rating BurgerId="Sociis adipiscing" Deleted="True" Id="Erat rhoncus">
+					<DataObjects:Rating.Burger>
+						<DataObjects:Burger Deleted="False" Id="Enim imperdiet taciti" Ingredients="Parturient per" Name="Sagittis senectus himenaeos" PlaceId="Habitasse hendrerit placerat pulvinar"/>
+					</DataObjects:Rating.Burger>
+				</DataObjects:Rating>
+				<DataObjects:Rating BurgerId="Tellus sociosqu sed vestibulum" Deleted="True" Id="Penatibus porttitor nibh">
+					<DataObjects:Rating.Burger>
+						<DataObjects:Burger Deleted="False" Id="Malesuada volutpat" Ingredients="Ultrices vehicula eros" Name="Torquent vestibulum sit" PlaceId="Sem suscipit tempor sodales"/>
+					</DataObjects:Rating.Burger>
+				</DataObjects:Rating>
+			</DataObjects:Burger.Ratings>
+			<DataObjects:Burger.Version>
+				<System:Byte/>
+				<System:Byte/>
+				<System:Byte/>
+				<System:Byte/>
+				<System:Byte/>
+			</DataObjects:Burger.Version>
+		</DataObjects:Burger>
+		<DataObjects:Burger Deleted="True" Id="Dictumst sociis convallis parturient" Ingredients="Vestibulum turpis" Name="Morbi tortor nisi nulla" PlaceId="Viverra tristique parturient tempus vestibulum">
+			<DataObjects:Burger.Place>
+				<DataObjects:Place Address="Varius sed accumsan aliquam proin" Deleted="False" Id="Pharetra lectus sed parturient nunc" Name="Adipiscing vel praesent nam">
+					<DataObjects:Place.Burgers>
+						<DataObjects:Burger Deleted="True" Id="Est nunc integer" Ingredients="Aenean mauris" Name="Parturient vestibulum dictumst nisl" PlaceId="Dis ultricies bibendum"/>
+						<DataObjects:Burger Deleted="False" Id="Vivamus aliquam non augue" Ingredients="Mus nec" Name="Odio leo quisque venenatis" PlaceId="Eleifend facilisi hac"/>
+						<DataObjects:Burger Deleted="True" Id="Orci vestibulum" Ingredients="Habitant curabitur" Name="Faucibus nullam sem blandit" PlaceId="Vulputate per sed aliquet dolor"/>
+						<DataObjects:Burger Deleted="False" Id="Lobortis consequat fames congue" Ingredients="Quam interdum phasellus quis auctor" Name="Sit vel inceptos" PlaceId="Aptent pede"/>
+						<DataObjects:Burger Deleted="True" Id="Nam dictum" Ingredients="Duis adipiscing" Name="Urna conubia nascetur cras cubilia" PlaceId="Convallis cursus felis commodo"/>
+					</DataObjects:Place.Burgers>
+					<DataObjects:Place.Version>
+						<System:Byte/>
+						<System:Byte/>
+						<System:Byte/>
+						<System:Byte/>
+						<System:Byte/>
+					</DataObjects:Place.Version>
+				</DataObjects:Place>
+			</DataObjects:Burger.Place>
+			<DataObjects:Burger.Ratings>
+				<DataObjects:Rating BurgerId="Dis est amet dapibus vestibulum" Deleted="False" Id="Sociosqu magna">
+					<DataObjects:Rating.Burger>
+						<DataObjects:Burger Deleted="True" Id="Euismod sagittis lorem arcu senectus" Ingredients="Lacus pulvinar vestibulum ante" Name="Ipsum justo libero egestas placerat" PlaceId="Hac dignissim"/>
+					</DataObjects:Rating.Burger>
+				</DataObjects:Rating>
+				<DataObjects:Rating BurgerId="Massa suscipit adipiscing leo torquent" Deleted="False" Id="Netus ultrices">
+					<DataObjects:Rating.Burger>
+						<DataObjects:Burger Deleted="True" Id="Morbi neque magnis" Ingredients="Facilisis metus" Name="Ligula diam litora luctus" PlaceId="Elementum parturient"/>
+					</DataObjects:Rating.Burger>
+				</DataObjects:Rating>
+				<DataObjects:Rating BurgerId="Fermentum eget elit" Deleted="False" Id="Vestibulum eros">
+					<DataObjects:Rating.Burger>
+						<DataObjects:Burger Deleted="True" Id="Porta malesuada penatibus vestibulum nec" Ingredients="Hendrerit himenaeos imperdiet feugiat" Name="Habitasse nulla mus enim erat" PlaceId="Vehicula fringilla"/>
+					</DataObjects:Rating.Burger>
+				</DataObjects:Rating>
+				<DataObjects:Rating BurgerId="Gravida mattis non mauris" Deleted="False" Id="Iaculis venenatis lacinia">
+					<DataObjects:Rating.Burger>
+						<DataObjects:Burger Deleted="True" Id="Maecenas ultricies nisi praesent accumsan" Ingredients="Tristique montes sed" Name="Risus nibh per mollis" PlaceId="Purus adipiscing porttitor volutpat tincidunt"/>
+					</DataObjects:Rating.Burger>
+				</DataObjects:Rating>
+				<DataObjects:Rating BurgerId="Nostra laoreet vulputate" Deleted="False" Id="Semper consequat bibendum">
+					<DataObjects:Rating.Burger>
+						<DataObjects:Burger Deleted="True" Id="Potenti phasellus sapien curae" Ingredients="Curabitur sem class" Name="Primis rutrum velit posuere vitae" PlaceId="Ornare platea natoque"/>
+					</DataObjects:Rating.Burger>
+				</DataObjects:Rating>
+			</DataObjects:Burger.Ratings>
+			<DataObjects:Burger.Version>
+				<System:Byte/>
+				<System:Byte/>
+				<System:Byte/>
+				<System:Byte/>
+				<System:Byte/>
+			</DataObjects:Burger.Version>
+		</DataObjects:Burger>
+		<DataObjects:Burger Deleted="False" Id="Adipiscing nisi pretium" Ingredients="Rhoncus vestibulum facilisi vel donec" Name="Taciti vestibulum pretium" PlaceId="Eleifend nisl sit dignissim nunc">
+			<DataObjects:Burger.Place>
+				<DataObjects:Place Address="Habitant adipiscing sodales inceptos" Deleted="True" Id="Aenean blandit" Name="Etiam fusce elementum faucibus">
+					<DataObjects:Place.Burgers>
+						<DataObjects:Burger Deleted="False" Id="Sed viverra fermentum dolor" Ingredients="Parturient facilisis interdum orci" Name="Morbi nulla proin augue odio" PlaceId="Nam lorem"/>
+						<DataObjects:Burger Deleted="True" Id="Fringilla nascetur quam hac" Ingredients="Aliquam felis" Name="Dis est tellus pede" PlaceId="Fames lobortis"/>
+						<DataObjects:Burger Deleted="False" Id="Adipiscing duis" Ingredients="Pharetra habitasse hendrerit tempus" Name="Urna cras" PlaceId="Quis vestibulum vestibulum leo tempor"/>
+						<DataObjects:Burger Deleted="True" Id="Vestibulum non aliquam tortor per" Ingredients="Quisque parturient vivamus nec sociosqu" Name="Sagittis ipsum integer mus senectus" PlaceId="Placerat pulvinar"/>
+						<DataObjects:Burger Deleted="False" Id="Imperdiet varius sit" Ingredients="Adipiscing suscipit himenaeos" Name="Sem vestibulum" PlaceId="Turpis aliquet sed justo"/>
+					</DataObjects:Place.Burgers>
+					<DataObjects:Place.Version>
+						<System:Byte/>
+						<System:Byte/>
+						<System:Byte/>
+						<System:Byte/>
+						<System:Byte/>
+					</DataObjects:Place.Version>
+				</DataObjects:Place>
+			</DataObjects:Burger.Place>
+			<DataObjects:Burger.Ratings>
+				<DataObjects:Rating BurgerId="Nunc vel parturient torquent" Deleted="True" Id="Nam vehicula arcu">
+					<DataObjects:Rating.Burger>
+						<DataObjects:Burger Deleted="False" Id="Nullam penatibus lacus aptent" Ingredients="Mauris conubia ante" Name="Vestibulum amet ultrices" PlaceId="Commodo malesuada"/>
+					</DataObjects:Rating.Burger>
+				</DataObjects:Rating>
+				<DataObjects:Rating BurgerId="Porttitor lorem" Deleted="True" Id="Dapibus sed congue">
+					<DataObjects:Rating.Burger>
+						<DataObjects:Burger Deleted="False" Id="Auctor cubilia vestibulum adipiscing" Ingredients="Praesent vulputate diam magna" Name="Volutpat maecenas venenatis" PlaceId="Tincidunt tristique ultricies"/>
+					</DataObjects:Rating.Burger>
+				</DataObjects:Rating>
+				<DataObjects:Rating BurgerId="Dis egestas" Deleted="True" Id="Dictumst elit morbi enim leo">
+					<DataObjects:Rating.Burger>
+						<DataObjects:Burger Deleted="False" Id="Massa metus consequat bibendum vestibulum" Ingredients="Phasellus euismod hac" Name="Accumsan curabitur" PlaceId="Est eget parturient"/>
+					</DataObjects:Rating.Burger>
+				</DataObjects:Rating>
+				<DataObjects:Rating BurgerId="Vestibulum convallis mus neque cursus" Deleted="True" Id="Faucibus per parturient erat">
+					<DataObjects:Rating.Burger>
+						<DataObjects:Burger Deleted="False" Id="Eleifend facilisi lacinia" Ingredients="Iaculis adipiscing dignissim dictum" Name="Non gravida" PlaceId="Feugiat nec"/>
+					</DataObjects:Rating.Burger>
+				</DataObjects:Rating>
+				<DataObjects:Rating BurgerId="Vestibulum elementum eros habitant" Deleted="True" Id="Interdum lobortis nulla">
+					<DataObjects:Rating.Burger>
+						<DataObjects:Burger Deleted="False" Id="Nibh potenti fermentum fringilla netus" Ingredients="Posuere litora vestibulum luctus" Name="Libero natoque ligula facilisis inceptos" PlaceId="Lectus laoreet"/>
+					</DataObjects:Rating.Burger>
+				</DataObjects:Rating>
+			</DataObjects:Burger.Ratings>
+			<DataObjects:Burger.Version>
+				<System:Byte/>
+				<System:Byte/>
+				<System:Byte/>
+				<System:Byte/>
+				<System:Byte/>
+			</DataObjects:Burger.Version>
+		</DataObjects:Burger>
+		<DataObjects:Burger Deleted="True" Id="Dictum interdum vestibulum lobortis pretium" Ingredients="Vel magnis nam" Name="Porta sit" PlaceId="Parturient sed sem">
+			<DataObjects:Burger.Place>
+				<DataObjects:Place Address="Habitasse hendrerit odio mauris" Deleted="False" Id="Eget per vestibulum commodo tristique" Name="Nisl nunc nascetur mattis">
+					<DataObjects:Place.Burgers>
+						<DataObjects:Burger Deleted="True" Id="Imperdiet risus pulvinar" Ingredients="Montes orci nostra sed" Name="Himenaeos purus mollis" PlaceId="Pharetra placerat"/>
+						<DataObjects:Burger Deleted="False" Id="Viverra quis vitae" Ingredients="Sodales dis malesuada" Name="Vestibulum sagittis velit" PlaceId="Ornare pede rhoncus quam platea"/>
+						<DataObjects:Burger Deleted="True" Id="Aliquam cras adipiscing duis" Ingredients="Urna mus" Name="Primis est hac vestibulum leo" PlaceId="Penatibus class"/>
+						<DataObjects:Burger Deleted="False" Id="Amet parturient vestibulum" Ingredients="Vivamus aliquam vestibulum adipiscing" Name="Porttitor senectus quisque vestibulum" PlaceId="Rutrum parturient integer curae nunc"/>
+						<DataObjects:Burger Deleted="True" Id="Parturient tincidunt donec blandit diam" Ingredients="Adipiscing non" Name="Arcu nec sociosqu" PlaceId="Aliquet vestibulum ante"/>
+					</DataObjects:Place.Burgers>
+					<DataObjects:Place.Version>
+						<System:Byte/>
+						<System:Byte/>
+						<System:Byte/>
+						<System:Byte/>
+						<System:Byte/>
+					</DataObjects:Place.Version>
+				</DataObjects:Place>
+			</DataObjects:Burger.Place>
+			<DataObjects:Burger.Ratings>
+				<DataObjects:Rating BurgerId="Elit sapien vestibulum ultricies suscipit" Deleted="False" Id="Vel vehicula nam conubia">
+					<DataObjects:Rating.Burger>
+						<DataObjects:Burger Deleted="True" Id="Sociis ultrices adipiscing convallis" Ingredients="Sem torquent sit etiam" Name="Phasellus consequat sed" PlaceId="Venenatis semper vulputate curabitur"/>
+					</DataObjects:Rating.Burger>
+				</DataObjects:Rating>
+				<DataObjects:Rating BurgerId="Fusce taciti tellus sed lorem" Deleted="False" Id="Maecenas nulla vestibulum erat eros">
+					<DataObjects:Rating.Burger>
+						<DataObjects:Burger Deleted="True" Id="Vestibulum volutpat morbi tempus" Ingredients="Parturient egestas" Name="Tempor enim" PlaceId="Dignissim cubilia dapibus"/>
+					</DataObjects:Rating.Burger>
+				</DataObjects:Rating>
+				<DataObjects:Rating BurgerId="Elementum praesent euismod" Deleted="False" Id="Proin augue">
+					<DataObjects:Rating.Burger>
+						<DataObjects:Burger Deleted="True" Id="Turpis varius iaculis nibh" Ingredients="Dictumst gravida" Name="Accumsan tortor parturient bibendum" PlaceId="Feugiat adipiscing"/>
+					</DataObjects:Rating.Burger>
+				</DataObjects:Rating>
+				<DataObjects:Rating BurgerId="Aenean vestibulum nisi dolor eleifend" Deleted="False" Id="Hendrerit natoque">
+					<DataObjects:Rating.Burger>
+						<DataObjects:Burger Deleted="True" Id="Habitasse felis nullam faucibus" Ingredients="Dis fermentum fringilla" Name="Lacinia fames facilisis mauris laoreet" PlaceId="Vestibulum facilisi"/>
+					</DataObjects:Rating.Burger>
+				</DataObjects:Rating>
+				<DataObjects:Rating BurgerId="Aptent est" Deleted="False" Id="Adipiscing parturient potenti vestibulum nec">
+					<DataObjects:Rating.Burger>
+						<DataObjects:Burger Deleted="True" Id="Parturient vestibulum vestibulum odio inceptos" Ingredients="Leo mus cursus adipiscing" Name="Nisl posuere nunc" PlaceId="Hac habitant himenaeos auctor congue"/>
+					</DataObjects:Rating.Burger>
+				</DataObjects:Rating>
+			</DataObjects:Burger.Ratings>
+			<DataObjects:Burger.Version>
+				<System:Byte/>
+				<System:Byte/>
+				<System:Byte/>
+				<System:Byte/>
+				<System:Byte/>
+			</DataObjects:Burger.Version>
+		</DataObjects:Burger>
+		<DataObjects:Burger Deleted="False" Id="Sed proin" Ingredients="Rhoncus vestibulum sodales ipsum justo" Name="Libero nascetur adipiscing parturient orci" PlaceId="Non per lectus">
+			<DataObjects:Burger.Place>
+				<DataObjects:Place Address="Aliquam pharetra malesuada vestibulum" Deleted="True" Id="Phasellus arcu parturient montes diam" Name="Imperdiet viverra lacus">
+					<DataObjects:Place.Burgers>
+						<DataObjects:Burger Deleted="False" Id="Litora placerat pulvinar quisque" Ingredients="Sed quam quis" Name="Parturient vestibulum integer penatibus pede" PlaceId="Adipiscing ligula lorem"/>
+						<DataObjects:Burger Deleted="True" Id="Magna massa cras aliquet" Ingredients="Sem senectus" Name="Sagittis vestibulum" PlaceId="Urna vivamus aliquam"/>
+						<DataObjects:Burger Deleted="False" Id="Magnis conubia vel" Ingredients="Commodo suscipit tristique" Name="Sociosqu adipiscing parturient sit tincidunt" PlaceId="Blandit porttitor luctus"/>
+						<DataObjects:Burger Deleted="True" Id="Vehicula vestibulum" Ingredients="Sed cubilia ultrices nunc metus" Name="Nam mattis ultricies" PlaceId="Duis torquent"/>
+						<DataObjects:Burger Deleted="False" Id="Mauris neque ante mollis" Ingredients="Vulputate morbi hac leo curabitur" Name="Venenatis amet est adipiscing" PlaceId="Dis vestibulum"/>
+					</DataObjects:Place.Burgers>
+					<DataObjects:Place.Version>
+						<System:Byte/>
+						<System:Byte/>
+						<System:Byte/>
+						<System:Byte/>
+						<System:Byte/>
+					</DataObjects:Place.Version>
+				</DataObjects:Place>
+			</DataObjects:Burger.Place>
+			<DataObjects:Burger.Ratings>
+				<DataObjects:Rating BurgerId="Mus dapibus" Deleted="True" Id="Sed nulla feugiat">
+					<DataObjects:Rating.Burger>
+						<DataObjects:Burger Deleted="False" Id="Parturient vestibulum per" Ingredients="Euismod non adipiscing" Name="Vestibulum egestas eget nec vestibulum" PlaceId="Consequat netus volutpat"/>
+					</DataObjects:Rating.Burger>
+				</DataObjects:Rating>
+				<DataObjects:Rating BurgerId="Vestibulum maecenas" Deleted="True" Id="Parturient lacinia convallis nostra enim">
+					<DataObjects:Rating.Burger>
+						<DataObjects:Burger Deleted="False" Id="Accumsan bibendum iaculis porta" Ingredients="Vel gravida" Name="Adipiscing praesent" PlaceId="Elit sem sit"/>
+					</DataObjects:Rating.Burger>
+				</DataObjects:Rating>
+				<DataObjects:Rating BurgerId="Ornare laoreet nam purus natoque" Deleted="True" Id="Semper vestibulum adipiscing dis">
+					<DataObjects:Rating.Burger>
+						<DataObjects:Burger Deleted="False" Id="Sapien eleifend" Ingredients="Elementum curae posuere rutrum vestibulum" Name="Velit vitae class dignissim" PlaceId="Risus sed platea dictumst primis"/>
+					</DataObjects:Rating.Burger>
+				</DataObjects:Rating>
+				<DataObjects:Rating BurgerId="Sociis donec etiam fusce" Deleted="True" Id="Sodales eros morbi">
+					<DataObjects:Rating.Burger>
+						<DataObjects:Burger Deleted="False" Id="Hac facilisis vestibulum" Ingredients="Potenti facilisi pretium rhoncus" Name="Taciti parturient" PlaceId="Erat lorem est"/>
+					</DataObjects:Rating.Burger>
+				</DataObjects:Rating>
+				<DataObjects:Rating BurgerId="Faucibus nibh tellus fermentum habitant" Deleted="True" Id="Fringilla nunc aliquam">
+					<DataObjects:Rating.Burger>
+						<DataObjects:Burger Deleted="False" Id="Nisl nulla non per" Ingredients="Nec inceptos" Name="Vestibulum mus viverra" PlaceId="Leo tempor nisi"/>
+					</DataObjects:Rating.Burger>
+				</DataObjects:Rating>
+			</DataObjects:Burger.Ratings>
+			<DataObjects:Burger.Version>
+				<System:Byte/>
+				<System:Byte/>
+				<System:Byte/>
+				<System:Byte/>
+				<System:Byte/>
+			</DataObjects:Burger.Version>
+		</DataObjects:Burger>
+		<DataObjects:Burger Deleted="True" Id="Primis sit eget" Ingredients="Sit felis lobortis orci habitasse" Name="Parturient fames sem tempus" PlaceId="Adipiscing augue dolor odio interdum">
+			<DataObjects:Burger.Place>
+				<DataObjects:Place Address="Nascetur pede pharetra" Deleted="False" Id="Sociosqu netus vestibulum suscipit conubia" Name="Vel tortor">
+					<DataObjects:Place.Burgers>
+						<DataObjects:Burger Deleted="True" Id="Hendrerit urna mauris integer" Ingredients="Justo vestibulum" Name="Aenean nam ipsum" PlaceId="Quam quis turpis varius"/>
+						<DataObjects:Burger Deleted="False" Id="Auctor placerat parturient vestibulum congue" Ingredients="Vestibulum adipiscing aliquam" Name="Vivamus lorem aptent" PlaceId="Cras nullam lacus sed quisque"/>
+						<DataObjects:Burger Deleted="True" Id="Cursus pulvinar magna massa" Ingredients="Parturient himenaeos nunc" Name="Adipiscing duis blandit" PlaceId="Dis aliquet est hac vestibulum"/>
+						<DataObjects:Burger Deleted="False" Id="Morbi ante arcu porttitor adipiscing" Ingredients="Dictum vestibulum vestibulum amet penatibus" Name="Imperdiet commodo malesuada" PlaceId="Metus sagittis"/>
+						<DataObjects:Burger Deleted="True" Id="Neque ultricies elit" Ingredients="Diam mus libero senectus eget" Name="Lectus tristique parturient" PlaceId="Tincidunt leo"/>
+					</DataObjects:Place.Burgers>
+					<DataObjects:Place.Version>
+						<System:Byte/>
+						<System:Byte/>
+						<System:Byte/>
+						<System:Byte/>
+						<System:Byte/>
+					</DataObjects:Place.Version>
+				</DataObjects:Place>
+			</DataObjects:Burger.Place>
+			<DataObjects:Burger.Ratings>
+				<DataObjects:Rating BurgerId="Cubilia nulla torquent" Deleted="False" Id="Vestibulum sed sem sit">
+					<DataObjects:Rating.Burger>
+						<DataObjects:Burger Deleted="True" Id="Parturient volutpat" Ingredients="Dapibus vehicula" Name="Non per ultrices adipiscing enim" PlaceId="Vestibulum porta nec"/>
+					</DataObjects:Rating.Burger>
+				</DataObjects:Rating>
+				<DataObjects:Rating BurgerId="Vestibulum purus erat eros risus" Deleted="False" Id="Curabitur phasellus vitae bibendum">
+					<DataObjects:Rating.Burger>
+						<DataObjects:Burger Deleted="True" Id="Feugiat velit" Ingredients="Praesent accumsan" Name="Nisi vulputate adipiscing euismod" PlaceId="Nibh ligula egestas maecenas venenatis"/>
+					</DataObjects:Rating.Burger>
+				</DataObjects:Rating>
+				<DataObjects:Rating BurgerId="Parturient gravida" Deleted="False" Id="Vestibulum iaculis mauris">
+					<DataObjects:Rating.Burger>
+						<DataObjects:Burger Deleted="True" Id="Orci magnis pede mattis convallis" Ingredients="Dictumst class vestibulum consequat" Name="Litora luctus nunc odio" PlaceId="Vel nisl nam"/>
+					</DataObjects:Rating.Burger>
+				</DataObjects:Rating>
+				<DataObjects:Rating BurgerId="Quam mollis quis urna adipiscing" Deleted="False" Id="Ante nostra">
+					<DataObjects:Rating.Burger>
+						<DataObjects:Burger Deleted="True" Id="Hac amet leo" Ingredients="Nunc montes lacinia est" Name="Eleifend duis curae facilisi" PlaceId="Sed cras dis"/>
+					</DataObjects:Rating.Burger>
+				</DataObjects:Rating>
+				<DataObjects:Rating BurgerId="Laoreet natoque ornare mus dignissim" Deleted="False" Id="Etiam diam sem potenti">
+					<DataObjects:Rating.Burger>
+						<DataObjects:Burger Deleted="True" Id="Per sed" Ingredients="Faucibus non parturient" Name="Facilisis fermentum donec" PlaceId="Posuere arcu platea elementum nec"/>
+					</DataObjects:Rating.Burger>
+				</DataObjects:Rating>
+			</DataObjects:Burger.Ratings>
+			<DataObjects:Burger.Version>
+				<System:Byte/>
+				<System:Byte/>
+				<System:Byte/>
+				<System:Byte/>
+				<System:Byte/>
+			</DataObjects:Burger.Version>
+		</DataObjects:Burger>
+		<DataObjects:Burger Deleted="False" Id="Non mauris rhoncus sodales viverra" Ingredients="Vestibulum hendrerit elit enim" Name="Rhoncus habitasse lorem vestibulum sodales" PlaceId="Pretium habitant fringilla vel fusce">
+			<DataObjects:Burger.Place>
+				<DataObjects:Place Address="Inceptos himenaeos" Deleted="True" Id="Sociosqu blandit venenatis pede lorem" Name="Viverra nam">
+					<DataObjects:Place.Burgers>
+						<DataObjects:Burger Deleted="False" Id="Hac sapien leo eros" Ingredients="Erat dis est interdum" Name="Adipiscing imperdiet malesuada aliquam" PlaceId="Sed rutrum"/>
+						<DataObjects:Burger Deleted="True" Id="Nibh non vestibulum" Ingredients="Tellus tempor nec" Name="Semper proin sociis taciti mus" PlaceId="Morbi parturient nulla penatibus"/>
+						<DataObjects:Burger Deleted="False" Id="Integer per" Ingredients="Pharetra adipiscing dolor parturient fames" Name="Tempus lobortis augue nascetur nisl" PlaceId="Vestibulum porttitor nisi"/>
+						<DataObjects:Burger Deleted="True" Id="Ipsum justo pulvinar turpis aliquet" Ingredients="Vestibulum tincidunt aliquam" Name="Placerat tortor nunc" PlaceId="Felis quisque vivamus"/>
+						<DataObjects:Burger Deleted="False" Id="Tristique adipiscing lacus ultricies senectus" Ingredients="Odio orci vestibulum" Name="Aenean sed" PlaceId="Varius sagittis"/>
+					</DataObjects:Place.Burgers>
+					<DataObjects:Place.Version>
+						<System:Byte/>
+						<System:Byte/>
+						<System:Byte/>
+						<System:Byte/>
+						<System:Byte/>
+					</DataObjects:Place.Version>
+				</DataObjects:Place>
+			</DataObjects:Burger.Place>
+			<DataObjects:Burger.Ratings>
+				<DataObjects:Rating BurgerId="Quam parturient vestibulum sem vestibulum" Deleted="True" Id="Ultrices metus quis vulputate">
+					<DataObjects:Rating.Burger>
+						<DataObjects:Burger Deleted="False" Id="Magna torquent massa" Ingredients="Sit cubilia vel" Name="Conubia suscipit adipiscing" PlaceId="Commodo mauris"/>
+					</DataObjects:Rating.Burger>
+				</DataObjects:Rating>
+				<DataObjects:Rating BurgerId="Parturient urna morbi cras nullam" Deleted="True" Id="Parturient dictum">
+					<DataObjects:Rating.Burger>
+						<DataObjects:Burger Deleted="False" Id="Congue cursus euismod amet" Ingredients="Vestibulum auctor adipiscing nunc vehicula" Name="Egestas aptent" PlaceId="Dapibus duis vestibulum curabitur"/>
+					</DataObjects:Rating.Burger>
+				</DataObjects:Rating>
+				<DataObjects:Rating BurgerId="Feugiat ante vestibulum neque" Deleted="True" Id="Maecenas porta purus iaculis praesent">
+					<DataObjects:Rating.Burger>
+						<DataObjects:Burger Deleted="False" Id="Gravida consequat" Ingredients="Volutpat nulla lectus sed" Name="Netus nam diam" PlaceId="Phasellus vestibulum arcu"/>
+					</DataObjects:Rating.Burger>
+				</DataObjects:Rating>
+				<DataObjects:Rating BurgerId="Dis lacinia eget est elit" Deleted="True" Id="Bibendum ligula natoque nibh velit">
+					<DataObjects:Rating.Burger>
+						<DataObjects:Burger Deleted="False" Id="Leo erat mus accumsan eros" Ingredients="Dignissim hac parturient libero laoreet" Name="Convallis risus" PlaceId="Enim adipiscing"/>
+					</DataObjects:Rating.Burger>
+				</DataObjects:Rating>
+				<DataObjects:Rating BurgerId="Nisi posuere nisl" Deleted="True" Id="Potenti habitant magnis pretium mattis">
+					<DataObjects:Rating.Burger>
+						<DataObjects:Burger Deleted="False" Id="Vitae faucibus fringilla odio" Ingredients="Luctus facilisi fermentum" Name="Eleifend nunc elementum litora facilisis" PlaceId="Nec dictumst"/>
+					</DataObjects:Rating.Burger>
+				</DataObjects:Rating>
+			</DataObjects:Burger.Ratings>
+			<DataObjects:Burger.Version>
+				<System:Byte/>
+				<System:Byte/>
+				<System:Byte/>
+				<System:Byte/>
+				<System:Byte/>
+			</DataObjects:Burger.Version>
+		</DataObjects:Burger>
+		<DataObjects:Burger Deleted="True" Id="Curabitur sit interdum natoque" Ingredients="Hendrerit himenaeos" Name="Pede integer mollis" PlaceId="Aliquam orci habitasse">
+			<DataObjects:Burger.Place>
+				<DataObjects:Place Address="Per vivamus aliquam class" Deleted="False" Id="Sed tempus sociosqu" Name="Quisque vestibulum imperdiet">
+					<DataObjects:Place.Burgers>
+						<DataObjects:Burger Deleted="True" Id="Primis adipiscing" Ingredients="Vestibulum platea" Name="Nostra ornare malesuada" PlaceId="Montes inceptos quam"/>
+						<DataObjects:Burger Deleted="False" Id="Nascetur commodo" Ingredients="Urna blandit" Name="Rutrum tincidunt aliquet quis" PlaceId="Penatibus interdum lobortis porttitor"/>
+						<DataObjects:Burger Deleted="True" Id="Vestibulum semper duis sem sit" Ingredients="Cubilia cras vestibulum etiam" Name="Parturient sapien sed ultricies donec" PlaceId="Conubia tristique curae"/>
+						<DataObjects:Burger Deleted="False" Id="Amet ante" Ingredients="Lorem venenatis sagittis nunc vel" Name="Pulvinar fusce" PlaceId="Pharetra placerat"/>
+						<DataObjects:Burger Deleted="True" Id="Phasellus dapibus" Ingredients="Taciti diam tellus tempor" Name="Adipiscing senectus curabitur nam" PlaceId="Arcu vulputate sociis"/>
+					</DataObjects:Place.Burgers>
+					<DataObjects:Place.Version>
+						<System:Byte/>
+						<System:Byte/>
+						<System:Byte/>
+						<System:Byte/>
+						<System:Byte/>
+					</DataObjects:Place.Version>
+				</DataObjects:Place>
+			</DataObjects:Burger.Place>
+			<DataObjects:Burger.Ratings>
+				<DataObjects:Rating BurgerId="Consequat tortor parturient" Deleted="False" Id="Parturient torquent">
+					<DataObjects:Rating.Burger>
+						<DataObjects:Burger Deleted="True" Id="Suscipit convallis varius" Ingredients="Vestibulum vestibulum morbi eget adipiscing" Name="Euismod est turpis" PlaceId="Dis egestas"/>
+					</DataObjects:Rating.Burger>
+				</DataObjects:Rating>
+				<DataObjects:Rating BurgerId="Elit ultrices" Deleted="False" Id="Eros fermentum">
+					<DataObjects:Rating.Burger>
+						<DataObjects:Burger Deleted="True" Id="Enim erat adipiscing" Ingredients="Elementum vestibulum volutpat proin facilisis" Name="Vehicula hac nulla" PlaceId="Dignissim vestibulum"/>
+					</DataObjects:Rating.Burger>
+				</DataObjects:Rating>
+				<DataObjects:Rating BurgerId="Maecenas nibh nisi feugiat praesent" Deleted="False" Id="Imperdiet malesuada dictumst penatibus">
+					<DataObjects:Rating.Burger>
+						<DataObjects:Burger Deleted="True" Id="Vestibulum himenaeos adipiscing parturient" Ingredients="Bibendum mus vestibulum hendrerit" Name="Accumsan gravida habitasse aenean iaculis" PlaceId="Fringilla parturient leo"/>
+					</DataObjects:Rating.Burger>
+				</DataObjects:Rating>
+				<DataObjects:Rating BurgerId="Lacinia mauris nisl" Deleted="False" Id="Aptent auctor fames">
+					<DataObjects:Rating.Burger>
+						<DataObjects:Burger Deleted="True" Id="Venenatis vestibulum adipiscing" Ingredients="Ultricies nunc nullam vestibulum" Name="Tincidunt tristique per dolor" PlaceId="Nec porttitor non augue"/>
+					</DataObjects:Rating.Burger>
+				</DataObjects:Rating>
+				<DataObjects:Rating BurgerId="Congue parturient odio vestibulum felis" Deleted="False" Id="Laoreet dictum faucibus habitant inceptos">
+					<DataObjects:Rating.Burger>
+						<DataObjects:Burger Deleted="True" Id="Lacus facilisi adipiscing parturient" Ingredients="Eleifend sem" Name="Vulputate vestibulum justo cursus" PlaceId="Orci sed ipsum"/>
+					</DataObjects:Rating.Burger>
+				</DataObjects:Rating>
+			</DataObjects:Burger.Ratings>
+			<DataObjects:Burger.Version>
+				<System:Byte/>
+				<System:Byte/>
+				<System:Byte/>
+				<System:Byte/>
+				<System:Byte/>
+			</DataObjects:Burger.Version>
+		</DataObjects:Burger>
+		<DataObjects:Burger Deleted="False" Id="Facilisi varius lacus vestibulum" Ingredients="Lectus quam" Name="Lorem pede" PlaceId="Vestibulum vel nam phasellus">
+			<DataObjects:Burger.Place>
+				<DataObjects:Place Address="Urna ligula" Deleted="True" Id="Imperdiet curae aliquam sit" Name="Posuere sed quis libero consequat">
+					<DataObjects:Place.Burgers>
+						<DataObjects:Burger Deleted="False" Id="Est hac parturient vestibulum" Ingredients="Potenti cras" Name="Litora massa" PlaceId="Vestibulum dis adipiscing magna"/>
+						<DataObjects:Burger Deleted="True" Id="Dignissim leo vestibulum metus morbi" Ingredients="Nunc amet" Name="Pretium pharetra" PlaceId="Lobortis nascetur duis luctus convallis"/>
+						<DataObjects:Burger Deleted="False" Id="Fermentum neque netus nulla parturient" Ingredients="Senectus sociosqu facilisis" Name="Pulvinar magnis sagittis ante arcu" PlaceId="Adipiscing elementum placerat"/>
+						<DataObjects:Burger Deleted="True" Id="Non vestibulum adipiscing per enim" Ingredients="Mollis vestibulum eget nec elit" Name="Mauris porta rhoncus" PlaceId="Mus fringilla mattis diam habitasse"/>
+						<DataObjects:Burger Deleted="False" Id="Sem velit vitae parturient class" Ingredients="Nostra sed sodales viverra" Name="Risus suscipit erat himenaeos" PlaceId="Purus hendrerit montes"/>
+					</DataObjects:Place.Burgers>
+					<DataObjects:Place.Version>
+						<System:Byte/>
+						<System:Byte/>
+						<System:Byte/>
+						<System:Byte/>
+						<System:Byte/>
+					</DataObjects:Place.Version>
+				</DataObjects:Place>
+			</DataObjects:Burger.Place>
+			<DataObjects:Burger.Ratings>
+				<DataObjects:Rating BurgerId="Ornare integer platea vel donec" Deleted="True" Id="Aliquet primis ultrices">
+					<DataObjects:Rating.Burger>
+						<DataObjects:Burger Deleted="False" Id="Nam adipiscing" Ingredients="Aliquam torquent vestibulum malesuada" Name="Eros vestibulum" PlaceId="Quisque vivamus"/>
+					</DataObjects:Rating.Burger>
+				</DataObjects:Rating>
+				<DataObjects:Rating BurgerId="Sed nibh rutrum" Deleted="True" Id="Vestibulum nisi volutpat">
+					<DataObjects:Rating.Burger>
+						<DataObjects:Burger Deleted="False" Id="Vehicula tincidunt morbi nulla" Ingredients="Parturient fusce commodo lorem vestibulum" Name="Dis semper blandit porttitor est" PlaceId="Etiam sapien penatibus"/>
+					</DataObjects:Rating.Burger>
+				</DataObjects:Rating>
+				<DataObjects:Rating BurgerId="Conubia cubilia sociis tristique" Deleted="True" Id="Per augue sed dapibus">
+					<DataObjects:Rating.Burger>
+						<DataObjects:Burger Deleted="False" Id="Nec adipiscing parturient venenatis non" Ingredients="Praesent leo mus accumsan" Name="Ultricies hac odio tellus" PlaceId="Maecenas nisl nunc taciti proin"/>
+					</DataObjects:Rating.Burger>
+				</DataObjects:Rating>
+				<DataObjects:Rating BurgerId="Vestibulum tempor sem" Deleted="True" Id="Nam quam">
+					<DataObjects:Rating.Burger>
+						<DataObjects:Burger Deleted="False" Id="Dolor pede fames felis curabitur" Ingredients="Vel parturient" Name="Egestas adipiscing vulputate" PlaceId="Orci sit bibendum vestibulum"/>
+					</DataObjects:Rating.Burger>
+				</DataObjects:Rating>
+				<DataObjects:Rating BurgerId="Tempus phasellus quis euismod consequat" Deleted="True" Id="Dignissim justo nunc">
+					<DataObjects:Rating.Burger>
+						<DataObjects:Burger Deleted="False" Id="Turpis dis eleifend duis ipsum" Ingredients="Convallis tortor" Name="Sed cras" PlaceId="Dictumst urna"/>
+					</DataObjects:Rating.Burger>
+				</DataObjects:Rating>
+			</DataObjects:Burger.Ratings>
+			<DataObjects:Burger.Version>
+				<System:Byte/>
+				<System:Byte/>
+				<System:Byte/>
+				<System:Byte/>
+				<System:Byte/>
+			</DataObjects:Burger.Version>
+		</DataObjects:Burger>
+	</ViewModels:FirstViewModel.Burgers>
+	<ViewModels:FirstViewModel.Places>
+		<DataObjects:Place Address="Class maecenas aenean" Deleted="True" Id="Mattis gravida iaculis" Name="Nam vestibulum">
+			<DataObjects:Place.Burgers>
+				<DataObjects:Burger Deleted="False" Id="Duis fusce lorem" Ingredients="Adipiscing accumsan mauris parturient" Name="Vivamus praesent" PlaceId="Aliquam curabitur integer quisque phasellus">
+					<DataObjects:Burger.Place>
+						<DataObjects:Place Address="Dis convallis dictumst donec eleifend" Deleted="True" Id="Cras dignissim elementum etiam" Name="Bibendum nullam sed consequat curae"/>
+					</DataObjects:Burger.Place>
+				</DataObjects:Burger>
+				<DataObjects:Burger Deleted="False" Id="Nec habitant nunc amet" Ingredients="Facilisis morbi" Name="Hac facilisi" PlaceId="Aptent est">
+					<DataObjects:Burger.Place>
+						<DataObjects:Place Address="Blandit vestibulum auctor mus" Deleted="True" Id="Faucibus congue" Name="Aliquam leo aliquet vestibulum"/>
+					</DataObjects:Burger.Place>
+				</DataObjects:Burger>
+				<DataObjects:Burger Deleted="False" Id="Fringilla arcu commodo" Ingredients="Adipiscing interdum" Name="Dictum fermentum lectus" PlaceId="Non cursus per ante inceptos">
+					<DataObjects:Burger.Place>
+						<DataObjects:Place Address="Proin augue" Deleted="True" Id="Libero nascetur ligula dolor" Name="Nulla lobortis"/>
+					</DataObjects:Burger.Place>
+				</DataObjects:Burger>
+				<DataObjects:Burger Deleted="False" Id="Elit sed malesuada placerat" Ingredients="Litora luctus imperdiet" Name="Himenaeos conubia" PlaceId="Habitasse hendrerit sed diam pharetra">
+					<DataObjects:Burger.Place>
+						<DataObjects:Place Address="Eget sit vel vestibulum" Deleted="True" Id="Nam magnis dapibus" Name="Cubilia parturient sem"/>
+					</DataObjects:Burger.Place>
+				</DataObjects:Burger>
+				<DataObjects:Burger Deleted="False" Id="Felis hac" Ingredients="Porttitor parturient sagittis fames" Name="Egestas est adipiscing penatibus" PlaceId="Vestibulum pulvinar dis">
+					<DataObjects:Burger.Place>
+						<DataObjects:Place Address="Adipiscing euismod enim" Deleted="True" Id="Parturient feugiat vestibulum sociosqu suscipit" Name="Senectus vestibulum vestibulum"/>
+					</DataObjects:Burger.Place>
+				</DataObjects:Burger>
+			</DataObjects:Place.Burgers>
+			<DataObjects:Place.Version>
+				<System:Byte/>
+				<System:Byte/>
+				<System:Byte/>
+				<System:Byte/>
+				<System:Byte/>
+			</DataObjects:Place.Version>
+		</DataObjects:Place>
+		<DataObjects:Place Address="Vestibulum mollis eros" Deleted="False" Id="Arcu adipiscing" Name="Erat mauris torquent ipsum tincidunt">
+			<DataObjects:Place.Burgers>
+				<DataObjects:Burger Deleted="True" Id="Per nisi laoreet" Ingredients="Parturient tristique mus lacus vestibulum" Name="Justo montes" PlaceId="Leo ultrices adipiscing">
+					<DataObjects:Burger.Place>
+						<DataObjects:Place Address="Non ultricies magna nibh lacinia" Deleted="False" Id="Adipiscing parturient massa metus" Name="Lorem nec vestibulum"/>
+					</DataObjects:Burger.Place>
+				</DataObjects:Burger>
+				<DataObjects:Burger Deleted="True" Id="Nunc sodales netus nam" Ingredients="Vehicula potenti volutpat vestibulum venenatis" Name="Neque posuere" PlaceId="Nostra natoque ornare morbi">
+					<DataObjects:Burger.Place>
+						<DataObjects:Place Address="Sem vulputate maecenas" Deleted="False" Id="Vestibulum sit vel platea rhoncus" Name="Nisl pretium sed"/>
+					</DataObjects:Burger.Place>
+				</DataObjects:Burger>
+				<DataObjects:Burger Deleted="True" Id="Pede eleifend semper" Ingredients="Accumsan curabitur phasellus dis porta" Name="Primis adipiscing praesent" PlaceId="Nulla sed">
+					<DataObjects:Burger.Place>
+						<DataObjects:Place Address="Viverra odio" Deleted="False" Id="Orci hac" Name="Rutrum bibendum est sapien dictumst"/>
+					</DataObjects:Burger.Place>
+				</DataObjects:Burger>
+				<DataObjects:Burger Deleted="True" Id="Habitant tellus" Ingredients="Mus consequat taciti convallis" Name="Sociis vestibulum leo" PlaceId="Parturient quam aliquam">
+					<DataObjects:Burger.Place>
+						<DataObjects:Place Address="Non dignissim cras" Deleted="False" Id="Duis purus faucibus per" Name="Nec quis urna facilisi"/>
+					</DataObjects:Burger.Place>
+				</DataObjects:Burger>
+				<DataObjects:Burger Deleted="True" Id="Vestibulum lobortis nascetur fringilla" Ingredients="Tempus vestibulum integer nunc" Name="Tempor parturient" PlaceId="Vestibulum adipiscing inceptos">
+					<DataObjects:Burger.Place>
+						<DataObjects:Place Address="Risus turpis amet" Deleted="False" Id="Interdum facilisis fermentum ante" Name="Tortor elementum sed"/>
+					</DataObjects:Burger.Place>
+				</DataObjects:Burger>
+			</DataObjects:Place.Burgers>
+			<DataObjects:Place.Version>
+				<System:Byte/>
+				<System:Byte/>
+				<System:Byte/>
+				<System:Byte/>
+				<System:Byte/>
+			</DataObjects:Place.Version>
+		</DataObjects:Place>
+		<DataObjects:Place Address="Hendrerit vestibulum" Deleted="True" Id="Magna volutpat vestibulum massa metus" Name="Varius aenean parturient habitasse">
+			<DataObjects:Place.Burgers>
+				<DataObjects:Burger Deleted="False" Id="Penatibus placerat" Ingredients="Vitae aliquam eget class mauris" Name="Pharetra quisque vivamus" PlaceId="Velit diam">
+					<DataObjects:Burger.Place>
+						<DataObjects:Place Address="Malesuada donec sem" Deleted="True" Id="Blandit commodo vestibulum" Name="Elit himenaeos imperdiet curae aliquet"/>
+					</DataObjects:Burger.Place>
+				</DataObjects:Burger>
+				<DataObjects:Burger Deleted="False" Id="Ultricies vestibulum" Ingredients="Vel tincidunt auctor cubilia dapibus" Name="Enim nullam conubia aptent sit" PlaceId="Porttitor etiam">
+					<DataObjects:Burger.Place>
+						<DataObjects:Place Address="Pulvinar fusce erat euismod parturient" Deleted="True" Id="Congue cursus" Name="Adipiscing egestas tristique"/>
+					</DataObjects:Burger.Place>
+				</DataObjects:Burger>
+				<DataObjects:Burger Deleted="False" Id="Ligula proin vulputate sociosqu" Ingredients="Feugiat gravida" Name="Nam vestibulum eros nibh adipiscing" PlaceId="Venenatis lorem sagittis">
+					<DataObjects:Burger.Place>
+						<DataObjects:Place Address="Dictum vestibulum sed senectus nulla" Deleted="True" Id="Lectus libero" Name="Parturient morbi"/>
+					</DataObjects:Burger.Place>
+				</DataObjects:Burger>
+				<DataObjects:Burger Deleted="False" Id="Dis natoque" Ingredients="Vestibulum fames" Name="Augue dolor" PlaceId="Nisi iaculis litora nisl">
+					<DataObjects:Burger.Place>
+						<DataObjects:Place Address="Laoreet felis" Deleted="True" Id="Curabitur adipiscing" Name="Luctus lacinia nunc"/>
+					</DataObjects:Burger.Place>
+				</DataObjects:Burger>
+				<DataObjects:Burger Deleted="False" Id="Viverra lacus mollis vehicula lorem" Ingredients="Magnis pede" Name="Potenti orci" PlaceId="Odio posuere est ipsum suscipit">
+					<DataObjects:Burger.Place>
+						<DataObjects:Place Address="Torquent leo rhoncus mattis" Deleted="True" Id="Mauris sodales mus phasellus ultrices" Name="Parturient pretium hac vestibulum justo"/>
+					</DataObjects:Burger.Place>
+				</DataObjects:Burger>
+			</DataObjects:Place.Burgers>
+			<DataObjects:Place.Version>
+				<System:Byte/>
+				<System:Byte/>
+				<System:Byte/>
+				<System:Byte/>
+				<System:Byte/>
+			</DataObjects:Place.Version>
+		</DataObjects:Place>
+		<DataObjects:Place Address="Convallis dignissim montes nostra" Deleted="False" Id="Tincidunt interdum feugiat non lobortis" Name="Consequat morbi">
+			<DataObjects:Place.Burgers>
+				<DataObjects:Burger Deleted="True" Id="Sapien parturient amet maecenas per" Ingredients="Integer facilisis netus" Name="Neque urna platea cras aliquam" PlaceId="Nec quam elementum quis ornare">
+					<DataObjects:Burger.Place>
+						<DataObjects:Place Address="Fermentum rutrum non" Deleted="False" Id="Duis fringilla adipiscing nunc" Name="Primis quisque vivamus nulla"/>
+					</DataObjects:Burger.Place>
+				</DataObjects:Burger>
+				<DataObjects:Burger Deleted="True" Id="Adipiscing hendrerit purus" Ingredients="Semper porta diam praesent" Name="Arcu sem" PlaceId="Sed vestibulum ante">
+					<DataObjects:Burger.Place>
+						<DataObjects:Place Address="Sit vel aliquam" Deleted="False" Id="Habitasse accumsan vestibulum bibendum" Name="Eget elit"/>
+					</DataObjects:Burger.Place>
+				</DataObjects:Burger>
+				<DataObjects:Burger Deleted="True" Id="Cubilia dapibus nisl" Ingredients="Aliquet dictumst blandit" Name="Velit enim erat vitae" PlaceId="Parturient vestibulum risus">
+					<DataObjects:Burger.Place>
+						<DataObjects:Place Address="Eleifend sociis conubia" Deleted="False" Id="Curae vestibulum nisi donec" Name="Eros commodo class nibh"/>
+					</DataObjects:Burger.Place>
+				</DataObjects:Burger>
+				<DataObjects:Burger Deleted="True" Id="Faucibus hac euismod" Ingredients="Orci fusce" Name="Odio egestas taciti" PlaceId="Nam nunc etiam">
+					<DataObjects:Burger.Place>
+						<DataObjects:Place Address="Sed parturient imperdiet malesuada penatibus" Deleted="False" Id="Lorem dis facilisi est" Name="Adipiscing himenaeos"/>
+					</DataObjects:Burger.Place>
+				</DataObjects:Burger>
+				<DataObjects:Burger Deleted="True" Id="Urna augue" Ingredients="Nulla tempor" Name="Pede morbi" PlaceId="Habitant tellus">
+					<DataObjects:Burger.Place>
+						<DataObjects:Place Address="Proin quam quis leo" Deleted="False" Id="Porttitor mus nec" Name="Vestibulum inceptos vestibulum tempus"/>
+					</DataObjects:Burger.Place>
+				</DataObjects:Burger>
+			</DataObjects:Place.Burgers>
+			<DataObjects:Place.Version>
+				<System:Byte/>
+				<System:Byte/>
+				<System:Byte/>
+				<System:Byte/>
+				<System:Byte/>
+			</DataObjects:Place.Version>
+		</DataObjects:Place>
+		<DataObjects:Place Address="Per pharetra" Deleted="True" Id="Adipiscing purus imperdiet dictumst risus" Name="Gravida tristique tortor nascetur">
+			<DataObjects:Place.Burgers>
+				<DataObjects:Burger Deleted="False" Id="Sagittis senectus aenean vestibulum natoque" Ingredients="Parturient sem dolor" Name="Sed lacinia turpis" PlaceId="Iaculis adipiscing">
+					<DataObjects:Burger.Place>
+						<DataObjects:Place Address="Varius fames" Deleted="True" Id="Venenatis placerat laoreet pulvinar" Name="Cras ultricies"/>
+					</DataObjects:Burger.Place>
+				</DataObjects:Burger>
+				<DataObjects:Burger Deleted="False" Id="Consequat nam rhoncus" Ingredients="Sociosqu posuere vestibulum nunc" Name="Curabitur duis justo mauris" PlaceId="Vulputate felis ipsum">
+					<DataObjects:Burger.Place>
+						<DataObjects:Place Address="Sit suscipit" Deleted="True" Id="Pretium adipiscing vel" Name="Potenti lacus phasellus nullam"/>
+					</DataObjects:Burger.Place>
+				</DataObjects:Burger>
+				<DataObjects:Burger Deleted="False" Id="Aliquam integer quisque" Ingredients="Sed dignissim" Name="Auctor amet convallis" PlaceId="Lorem aptent torquent">
+					<DataObjects:Burger.Place>
+						<DataObjects:Place Address="Sodales facilisis ultrices" Deleted="True" Id="Magna viverra" Name="Ante arcu dis elementum"/>
+					</DataObjects:Burger.Place>
+				</DataObjects:Burger>
+				<DataObjects:Burger Deleted="False" Id="Hac metus morbi leo" Ingredients="Vivamus fringilla habitasse" Name="Parturient est volutpat vestibulum eget" PlaceId="Fermentum diam vehicula congue">
+					<DataObjects:Burger.Place>
+						<DataObjects:Place Address="Vestibulum cursus dictum adipiscing massa" Deleted="True" Id="Parturient lectus elit" Name="Hendrerit himenaeos"/>
+					</DataObjects:Burger.Place>
+				</DataObjects:Burger>
+				<DataObjects:Burger Deleted="False" Id="Nisi non bibendum" Ingredients="Libero maecenas" Name="Aliquam nulla" PlaceId="Vestibulum enim vestibulum neque netus">
+					<DataObjects:Burger.Place>
+						<DataObjects:Place Address="Ligula mus nec nibh aliquet" Deleted="True" Id="Accumsan porta" Name="Erat praesent eros"/>
+					</DataObjects:Burger.Place>
+				</DataObjects:Burger>
+			</DataObjects:Place.Burgers>
+			<DataObjects:Place.Version>
+				<System:Byte/>
+				<System:Byte/>
+				<System:Byte/>
+				<System:Byte/>
+				<System:Byte/>
+			</DataObjects:Place.Version>
+		</DataObjects:Place>
+		<DataObjects:Place Address="Nisl velit nunc" Deleted="False" Id="Sociis vestibulum sagittis fermentum" Name="Blandit per eleifend">
+			<DataObjects:Place.Burgers>
+				<DataObjects:Burger Deleted="True" Id="Fusce sem sit vel pede" Ingredients="Class sed" Name="Parturient vestibulum orci vitae conubia" PlaceId="Malesuada odio commodo">
+					<DataObjects:Burger.Place>
+						<DataObjects:Place Address="Donec tincidunt" Deleted="False" Id="Etiam cubilia" Name="Penatibus porttitor curae litora"/>
+					</DataObjects:Burger.Place>
+				</DataObjects:Burger>
+				<DataObjects:Burger Deleted="True" Id="Est lobortis nascetur euismod" Ingredients="Magnis nam sed nulla dis" Name="Luctus faucibus morbi habitant" PlaceId="Lorem facilisi">
+					<DataObjects:Burger.Place>
+						<DataObjects:Place Address="Dapibus quam" Deleted="False" Id="Interdum egestas" Name="Inceptos tristique"/>
+					</DataObjects:Burger.Place>
+				</DataObjects:Burger>
+				<DataObjects:Burger Deleted="True" Id="Placerat montes duis phasellus nostra" Ingredients="Hac venenatis proin leo vulputate" Name="Urna vestibulum pharetra ultricies" PlaceId="Quis mattis feugiat">
+					<DataObjects:Burger.Place>
+						<DataObjects:Place Address="Mollis nec curabitur" Deleted="False" Id="Adipiscing non" Name="Mus cras augue mauris"/>
+					</DataObjects:Burger.Place>
+				</DataObjects:Burger>
+				<DataObjects:Burger Deleted="True" Id="Convallis dignissim ipsum" Ingredients="Per ornare fames" Name="Parturient consequat" PlaceId="Dolor nunc">
+					<DataObjects:Burger.Place>
+						<DataObjects:Place Address="Iaculis felis sed lacinia" Deleted="False" Id="Vestibulum arcu adipiscing parturient" Name="Gravida amet ante vestibulum"/>
+					</DataObjects:Burger.Place>
+				</DataObjects:Burger>
+				<DataObjects:Burger Deleted="True" Id="Semper nam sed" Ingredients="Laoreet platea" Name="Sem elementum facilisis" PlaceId="Vestibulum justo diam">
+					<DataObjects:Burger.Place>
+						<DataObjects:Place Address="Sapien natoque" Deleted="False" Id="Eget vel lorem pulvinar posuere" Name="Sit lacus primis rutrum"/>
+					</DataObjects:Burger.Place>
+				</DataObjects:Burger>
+			</DataObjects:Place.Burgers>
+			<DataObjects:Place.Version>
+				<System:Byte/>
+				<System:Byte/>
+				<System:Byte/>
+				<System:Byte/>
+				<System:Byte/>
+			</DataObjects:Place.Version>
+		</DataObjects:Place>
+		<DataObjects:Place Address="Potenti taciti massa dis" Deleted="True" Id="Ligula parturient cubilia quam" Name="Magna elit">
+			<DataObjects:Place.Burgers>
+				<DataObjects:Burger Deleted="False" Id="Nibh morbi neque hendrerit" Ingredients="Hac fringilla enim sodales" Name="Pretium sociosqu est rhoncus tellus" PlaceId="Senectus adipiscing metus">
+					<DataObjects:Burger.Place>
+						<DataObjects:Place Address="Suscipit mus" Deleted="True" Id="Torquent erat ultrices eros" Name="Leo habitasse"/>
+					</DataObjects:Burger.Place>
+				</DataObjects:Burger>
+				<DataObjects:Burger Deleted="False" Id="Nisl vitae turpis varius ultricies" Ingredients="Tempor malesuada tempus porta" Name="Viverra nulla imperdiet aliquam non" PlaceId="Himenaeos nisi netus nec">
+					<DataObjects:Burger.Place>
+						<DataObjects:Place Address="Risus velit penatibus" Deleted="True" Id="Porttitor tincidunt tristique" Name="Integer tortor purus per sed"/>
+					</DataObjects:Burger.Place>
+				</DataObjects:Burger>
+				<DataObjects:Burger Deleted="False" Id="Nullam odio" Ingredients="Vulputate mauris vehicula vivamus" Name="Quisque aenean" PlaceId="Sem venenatis class">
+					<DataObjects:Burger.Place>
+						<DataObjects:Place Address="Vestibulum maecenas aliquam praesent" Deleted="True" Id="Sit nunc accumsan vel bibendum" Name="Parturient volutpat"/>
+					</DataObjects:Burger.Place>
+				</DataObjects:Burger>
+				<DataObjects:Burger Deleted="False" Id="Eleifend etiam pede" Ingredients="Curabitur donec parturient" Name="Adipiscing curae aptent" PlaceId="Nam vestibulum sed dis">
+					<DataObjects:Burger.Place>
+						<DataObjects:Place Address="Congue phasellus consequat" Deleted="True" Id="Convallis vestibulum blandit cursus orci" Name="Auctor dictumst vestibulum aliquet"/>
+					</DataObjects:Burger.Place>
+				</DataObjects:Burger>
+				<DataObjects:Burger Deleted="False" Id="Interdum facilisis" Ingredients="Dictum faucibus" Name="Facilisi adipiscing commodo" PlaceId="Fusce est">
+					<DataObjects:Burger.Place>
+						<DataObjects:Place Address="Libero elementum hac" Deleted="True" Id="Morbi inceptos" Name="Lectus dignissim habitant lorem conubia"/>
+					</DataObjects:Burger.Place>
+				</DataObjects:Burger>
+			</DataObjects:Place.Burgers>
+			<DataObjects:Place.Version>
+				<System:Byte/>
+				<System:Byte/>
+				<System:Byte/>
+				<System:Byte/>
+				<System:Byte/>
+			</DataObjects:Place.Version>
+		</DataObjects:Place>
+		<DataObjects:Place Address="Quis fringilla habitasse nascetur" Deleted="False" Id="Elementum facilisis" Name="Lobortis nulla fermentum">
+			<DataObjects:Place.Burgers>
+				<DataObjects:Burger Deleted="True" Id="Sociosqu vestibulum nec" Ingredients="Pulvinar hendrerit sagittis dapibus himenaeos" Name="Pharetra vestibulum placerat augue" PlaceId="Vestibulum proin">
+					<DataObjects:Burger.Place>
+						<DataObjects:Place Address="Litora mus parturient felis" Deleted="False" Id="Senectus luctus imperdiet vestibulum cras" Name="Dolor urna adipiscing leo fames"/>
+					</DataObjects:Burger.Place>
+				</DataObjects:Burger>
+				<DataObjects:Burger Deleted="True" Id="Ultrices per mattis" Ingredients="Non porttitor" Name="Nunc penatibus" PlaceId="Suscipit torquent duis malesuada egestas">
+					<DataObjects:Burger.Place>
+						<DataObjects:Place Address="Feugiat adipiscing parturient ipsum gravida" Deleted="False" Id="Iaculis magnis justo" Name="Euismod amet tincidunt"/>
+					</DataObjects:Burger.Place>
+				</DataObjects:Burger>
+				<DataObjects:Burger Deleted="True" Id="Diam vel mollis parturient" Ingredients="Mauris laoreet tristique vehicula" Name="Lacinia sed" PlaceId="Ante vestibulum">
+					<DataObjects:Burger.Place>
+						<DataObjects:Place Address="Sem lorem adipiscing" Deleted="False" Id="Ultricies sit" Name="Vestibulum lacus volutpat arcu"/>
+					</DataObjects:Burger.Place>
+				</DataObjects:Burger>
+				<DataObjects:Burger Deleted="True" Id="Neque rhoncus" Ingredients="Praesent montes" Name="Natoque posuere magna potenti massa" PlaceId="Venenatis nam maecenas vulputate">
+					<DataObjects:Burger.Place>
+						<DataObjects:Place Address="Adipiscing eget morbi" Deleted="False" Id="Pretium sed curabitur" Name="Accumsan metus vestibulum vestibulum"/>
+					</DataObjects:Burger.Place>
+				</DataObjects:Burger>
+				<DataObjects:Burger Deleted="True" Id="Vestibulum dignissim" Ingredients="Dis sodales viverra ornare" Name="Phasellus nostra" PlaceId="Parturient bibendum vestibulum vestibulum dictumst">
+					<DataObjects:Burger.Place>
+						<DataObjects:Place Address="Parturient primis est aliquam" Deleted="False" Id="Integer enim quisque eleifend rutrum" Name="Platea consequat convallis elit adipiscing"/>
+					</DataObjects:Burger.Place>
+				</DataObjects:Burger>
+			</DataObjects:Place.Burgers>
+			<DataObjects:Place.Version>
+				<System:Byte/>
+				<System:Byte/>
+				<System:Byte/>
+				<System:Byte/>
+				<System:Byte/>
+			</DataObjects:Place.Version>
+		</DataObjects:Place>
+		<DataObjects:Place Address="Fermentum erat" Deleted="True" Id="Bibendum parturient dictumst rhoncus fusce" Name="Vivamus sapien hac aliquam aliquet">
+			<DataObjects:Place.Burgers>
+				<DataObjects:Burger Deleted="False" Id="Euismod netus" Ingredients="Conubia eros nibh parturient semper" Name="Commodo fringilla leo adipiscing" PlaceId="Facilisi blandit faucibus habitant vestibulum">
+					<DataObjects:Burger.Place>
+						<DataObjects:Place Address="Vestibulum lobortis mus" Deleted="True" Id="Nisi egestas nascetur nec" Name="Cubilia dapibus inceptos interdum"/>
+					</DataObjects:Burger.Place>
+				</DataObjects:Burger>
+				<DataObjects:Burger Deleted="False" Id="Vestibulum gravida odio" Ingredients="Nunc sociis hendrerit purus pharetra" Name="Nulla habitasse porta vestibulum per" PlaceId="Non nisl">
+					<DataObjects:Burger.Place>
+						<DataObjects:Place Address="Imperdiet placerat vestibulum" Deleted="True" Id="Tellus sed malesuada tempor" Name="Adipiscing taciti feugiat himenaeos parturient"/>
+					</DataObjects:Burger.Place>
+				</DataObjects:Burger>
+				<DataObjects:Burger Deleted="False" Id="Vestibulum sed quam" Ingredients="Risus velit" Name="Sit vel pulvinar" PlaceId="Sem tempus">
+					<DataObjects:Burger.Place>
+						<DataObjects:Place Address="Sagittis parturient orci vestibulum" Deleted="True" Id="Pede nam senectus tortor" Name="Penatibus adipiscing iaculis"/>
+					</DataObjects:Burger.Place>
+				</DataObjects:Burger>
+				<DataObjects:Burger Deleted="False" Id="Posuere donec quis" Ingredients="Dis curae parturient" Name="Porttitor class sociosqu adipiscing" PlaceId="Lacinia vitae laoreet">
+					<DataObjects:Burger.Place>
+						<DataObjects:Place Address="Tincidunt vestibulum torquent turpis tristique" Deleted="True" Id="Ultrices varius vehicula natoque" Name="Vestibulum suscipit"/>
+					</DataObjects:Burger.Place>
+				</DataObjects:Burger>
+				<DataObjects:Burger Deleted="False" Id="Accumsan amet aptent hac auctor" Ingredients="Est vestibulum" Name="Parturient urna vestibulum cras" PlaceId="Adipiscing potenti">
+					<DataObjects:Burger.Place>
+						<DataObjects:Place Address="Nunc etiam volutpat" Deleted="True" Id="Nullam ultricies maecenas praesent" Name="Pretium adipiscing aenean duis mauris"/>
+					</DataObjects:Burger.Place>
+				</DataObjects:Burger>
+			</DataObjects:Place.Burgers>
+			<DataObjects:Place.Version>
+				<System:Byte/>
+				<System:Byte/>
+				<System:Byte/>
+				<System:Byte/>
+				<System:Byte/>
+			</DataObjects:Place.Version>
+		</DataObjects:Place>
+		<DataObjects:Place Address="Mus congue vestibulum venenatis facilisi" Deleted="False" Id="Vestibulum adipiscing himenaeos" Name="Eleifend leo">
+			<DataObjects:Place.Burgers>
+				<DataObjects:Burger Deleted="True" Id="Diam vestibulum nascetur" Ingredients="Vulputate cursus" Name="Vestibulum adipiscing arcu" PlaceId="Faucibus nec ante">
+					<DataObjects:Burger.Place>
+						<DataObjects:Place Address="Inceptos morbi interdum parturient" Deleted="False" Id="Viverra dictum lobortis" Name="Sodales non habitant lorem"/>
+					</DataObjects:Burger.Place>
+				</DataObjects:Burger>
+				<DataObjects:Burger Deleted="True" Id="Ligula consequat sit parturient" Ingredients="Vestibulum enim" Name="Elit augue libero per" PlaceId="Nulla eget proin lectus">
+					<DataObjects:Burger.Place>
+						<DataObjects:Place Address="Phasellus placerat sem" Deleted="False" Id="Quisque vivamus adipiscing aliquam dolor" Name="Aliquam sed pharetra curabitur integer"/>
+					</DataObjects:Burger.Place>
+				</DataObjects:Burger>
+				<DataObjects:Burger Deleted="True" Id="Blandit adipiscing felis dignissim" Ingredients="Sagittis nam senectus vestibulum" Name="Fames pulvinar" PlaceId="Vel litora vestibulum">
+					<DataObjects:Burger.Place>
+						<DataObjects:Place Address="Dis magnis" Deleted="False" Id="Est mattis convallis suscipit" Name="Sociosqu aliquet sed luctus"/>
+					</DataObjects:Burger.Place>
+				</DataObjects:Burger>
+				<DataObjects:Burger Deleted="True" Id="Egestas adipiscing euismod per montes" Ingredients="Hac ipsum justo conubia" Name="Facilisis ultrices fermentum parturient vehicula" PlaceId="Elementum torquent commodo mauris">
+					<DataObjects:Burger.Place>
+						<DataObjects:Place Address="Mus cubilia nec" Deleted="False" Id="Erat vestibulum non dapibus mollis" Name="Leo vestibulum fringilla lacus volutpat"/>
+					</DataObjects:Burger.Place>
+				</DataObjects:Burger>
+				<DataObjects:Burger Deleted="True" Id="Vestibulum ornare" Ingredients="Nisi vestibulum sed praesent" Name="Maecenas eros feugiat nibh lorem" PlaceId="Parturient habitasse">
+					<DataObjects:Burger.Place>
+						<DataObjects:Place Address="Nisl accumsan" Deleted="False" Id="Hendrerit parturient nostra" Name="Vestibulum adipiscing"/>
+					</DataObjects:Burger.Place>
+				</DataObjects:Burger>
+			</DataObjects:Place.Burgers>
+			<DataObjects:Place.Version>
+				<System:Byte/>
+				<System:Byte/>
+				<System:Byte/>
+				<System:Byte/>
+				<System:Byte/>
+			</DataObjects:Place.Version>
+		</DataObjects:Place>
+	</ViewModels:FirstViewModel.Places>
+	<ViewModels:FirstViewModel.RequestedBy>
+		<ViewModels1:MvxRequestedBy AdditionalInfo="Elementum lorem est faucibus" Type="Other"/>
+	</ViewModels:FirstViewModel.RequestedBy>
+</ViewModels:FirstViewModel>
