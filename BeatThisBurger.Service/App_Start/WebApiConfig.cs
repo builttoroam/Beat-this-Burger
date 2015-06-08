@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Data.Entity;
 using System.Web.Http;
-using BeatThisBurger.Service.DataObjects;
+using BeatThisBurger.DataObjects;
 using BeatThisBurger.Service.Models;
 using Microsoft.Azure.Mobile.Server;
 using Microsoft.Azure.Mobile.Server.AppService.Config;
@@ -34,16 +34,16 @@ namespace BeatThisBurger.Service
     {
         protected override void Seed(MobileServiceContext context)
         {
-            List<TodoItem> todoItems = new List<TodoItem>
-            {
-                new TodoItem { Id = Guid.NewGuid().ToString(), Text = "First item", Complete = false },
-                new TodoItem { Id = Guid.NewGuid().ToString(), Text = "Second item", Complete = false },
-            };
+            //List<TodoItem> todoItems = new List<TodoItem>
+            //{
+            //    new TodoItem { Id = Guid.NewGuid().ToString(), Text = "First item", Complete = false },
+            //    new TodoItem { Id = Guid.NewGuid().ToString(), Text = "Second item", Complete = false },
+            //};
 
-            foreach (TodoItem todoItem in todoItems)
-            {
-                context.Set<TodoItem>().Add(todoItem);
-            }
+            //foreach (TodoItem todoItem in todoItems)
+            //{
+            //    context.Set<TodoItem>().Add(todoItem);
+            //}
 
             base.Seed(context);
         }

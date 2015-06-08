@@ -14,7 +14,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-using BeatThisBurger.Service.DataObjects;
+using BeatThisBurger.DataObjects;
 using Microsoft.WindowsAzure.MobileServices;
 using Microsoft.WindowsAzure.MobileServices.SQLiteStore;
 using Microsoft.WindowsAzure.MobileServices.Sync;
@@ -41,7 +41,9 @@ namespace BeatThisBurger.Windows
         private async Task Initialize()
         {
             if (HasInitialized) return;
-            Store.DefineTable<TodoItem>();
+            Store.DefineTable<Burger>();
+            Store.DefineTable<Place>();
+            Store.DefineTable<Rating>();
             await MobileService.SyncContext.InitializeAsync(Store, new MobileServiceSyncHandler());
             HasInitialized = true;
         }
@@ -56,11 +58,11 @@ namespace BeatThisBurger.Windows
             await Initialize();
 
             await MobileService.SyncContext.PushAsync();
-            var tbl = MobileService.GetSyncTable<TodoItem>();
+            var tbl = MobileService.GetSyncTable<Burger>();
             await tbl.PullAsync("items", tbl.Where(x => true));
 
 
-            tbl = MobileService.GetSyncTable<TodoItem>();
+            tbl = MobileService.GetSyncTable<Burger>();
             var items = (await tbl.ToListAsync()).ToArray();
             Debug.WriteLine(items.Length);
         }

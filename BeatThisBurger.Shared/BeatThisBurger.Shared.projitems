@@ -10,6 +10,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Constants.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)DataObjects\TodoItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DataObjects\Burger.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DataObjects\Place.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DataObjects\Rating.cs" />
   </ItemGroup>
 </Project>

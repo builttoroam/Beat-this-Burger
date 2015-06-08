@@ -227,7 +227,13 @@
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Constants-Service.cs" />
-    <Compile Include="Controllers\TodoItemController.cs" />
+    <Compile Include="Controllers\BaseTableController.cs" />
+    <Compile Include="Controllers\PlaceController.cs" />
+    <Compile Include="Migrations\201506080726289_InitialCreate.cs" />
+    <Compile Include="Migrations\201506080726289_InitialCreate.Designer.cs">
+      <DependentUpon>201506080726289_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\MobileServiceContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -252,6 +258,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\PublishProfiles\BeatThisBurger-code.pubxml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201506080726289_InitialCreate.resx">
+      <DependentUpon>201506080726289_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

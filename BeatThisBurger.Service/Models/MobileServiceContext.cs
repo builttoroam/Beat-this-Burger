@@ -1,9 +1,9 @@
 ﻿using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
+using BeatThisBurger.DataObjects;
 using Microsoft.Azure.Mobile.Server;
 using Microsoft.Azure.Mobile.Server.Tables;
-using BeatThisBurger.Service.DataObjects;
 
 namespace BeatThisBurger.Service.Models
 {
@@ -27,7 +27,9 @@ namespace BeatThisBurger.Service.Models
         {
         }
 
-        public DbSet<TodoItem> TodoItems { get; set; }
+        public DbSet<Place> Places { get; set; }
+        public DbSet<Burger> Burgers { get; set; }
+        public DbSet<Rating> Ratings { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
