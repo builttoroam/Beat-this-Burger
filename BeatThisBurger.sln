@@ -5,7 +5,13 @@ VisualStudioVersion = 14.0.22823.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeatThisBurger.Service", "BeatThisBurger.Service\BeatThisBurger.Service.csproj", "{C7C32286-F560-4CE0-8E00-FF7432F65C44}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "BeatThisBurger.Shared", "BeatThisBurger.Shared\BeatThisBurger.Shared.shproj", "{BA515146-15B9-46A5-A0F1-776485EA5D29}"
+EndProject
 Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		BeatThisBurger.Shared\BeatThisBurger.Shared.projitems*{c7c32286-f560-4ce0-8e00-ff7432f65c44}*SharedItemsImports = 4
+		BeatThisBurger.Shared\BeatThisBurger.Shared.projitems*{ba515146-15b9-46a5-a0f1-776485ea5d29}*SharedItemsImports = 13
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
