@@ -54,6 +54,53 @@
                 </StackPanel>
             </Grid>
         </DataTemplate>
+        <Style x:Key="MenuRadioButtonStyle" TargetType="RadioButton">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Foreground" Value="{ThemeResource SystemControlForegroundBaseHighBrush}"/>
+            <Setter Property="Padding" Value="8,6"/>
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalContentAlignment" Value="Right"/>
+            <Setter Property="VerticalContentAlignment" Value="Top"/>
+            <Setter Property="FontFamily" Value="{ThemeResource ContentControlThemeFontFamily}"/>
+            <Setter Property="FontSize" Value="{ThemeResource ControlContentThemeFontSize}"/>
+            <Setter Property="MinWidth" Value="120"/>
+            <Setter Property="UseSystemFocusVisuals" Value="True"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="RadioButton">
+                        <Grid BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}">
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal"/>
+                                    <VisualState x:Name="PointerOver"/>
+                                    <VisualState x:Name="Pressed"/>
+                                    <VisualState x:Name="Disabled" />
+
+                                </VisualStateGroup>
+                                <VisualStateGroup x:Name="CheckStates">
+                                    <VisualState x:Name="Checked">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Border.Background)" Storyboard.TargetName="border">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ButtonPressedBackgroundThemeBrush}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(ContentPresenter.Foreground)" Storyboard.TargetName="ContentPresenter">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ButtonPressedForegroundThemeBrush}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Unchecked"/>
+                                    <VisualState x:Name="Indeterminate"/>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Border x:Name="border" />
+                            <ContentPresenter x:Name="ContentPresenter" AutomationProperties.AccessibilityView="Raw" ContentTemplate="{TemplateBinding ContentTemplate}" ContentTransitions="{TemplateBinding ContentTransitions}" Content="{TemplateBinding Content}" Grid.Column="1" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" TextWrapping="Wrap" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
     </views:MvxWindowsPage.Resources>
 
     <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}"
@@ -115,11 +162,11 @@
         <SplitView x:Name="SV_Menu"
                    DisplayMode="Overlay">
             <SplitView.Pane>
-                <StackPanel x:Name="SP_Sort"
-                            RelativePanel.AlignLeftWithPanel="true"
-                            Width="200">
-                    <RadioButton Checked="SortChanged">Places</RadioButton>
-                    <RadioButton Checked="SortChanged">Burgers</RadioButton>
+                <StackPanel x:Name="SP_Sort">
+                    <RadioButton Checked="SortChanged"
+                                 Style="{StaticResource MenuRadioButtonStyle}">Places</RadioButton>
+                    <RadioButton Checked="SortChanged"
+                                 Style="{StaticResource MenuRadioButtonStyle}">Burgers</RadioButton>
                 </StackPanel>
             </SplitView.Pane>
             <RelativePanel>
@@ -144,8 +191,10 @@
                         RelativePanel.AlignHorizontalCenterWithPanel="true"
                         Click="{x:Bind Data.ViewModel.RecordNewBurger}">Add Burger</Button>
                 <Button x:Name="B_Expand"
-                        Click="ButtonBase_OnClick"
-                        Content="Expand" />
+                        Click="ButtonBase_OnClick" Background="Transparent" BorderThickness="0" d:IsHidden="True">
+                    <Image x:Name="image" Source="ms-appx:///Assets/BurgerIcon.png" Width="50" Height="50"/>
+                </Button>
+                <!--<RadioButton Checked="SortChanged" Style="{StaticResource MenuRadioButtonStyle}">Places</RadioButton>-->
             </RelativePanel>
         </SplitView>
         <!--<StackPanel>
