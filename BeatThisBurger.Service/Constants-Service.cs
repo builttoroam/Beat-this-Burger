@@ -7,5 +7,6 @@ namespace BeatThisBurger
 {
     public static partial class Constants
     {
+        public const string PhotosContainerName = "Photos";
     }
 }

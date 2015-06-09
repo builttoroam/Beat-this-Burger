@@ -64,12 +64,26 @@ namespace BeatThisBurger.Services
 
         public async Task<Burger[]> Burgers()
         {
-            return await All<Burger>();
+            var ratings = await Ratings();
+            var photos = await Photos();
+            var burgers = await All<Burger>();
+
+            foreach (var burger in burgers)
+            {
+                burger.Ratings = ratings.Where(r => r.BurgerId == burger.Id).ToArray();
+                burger.Photos = photos.Where(r => r.BurgerId == burger.Id).ToArray();
+            }
+            return burgers;
         }
 
         public async Task<Rating[]> Ratings()
         {
             return await All<Rating>();
+        }
+
+        public async Task<Photo[]> Photos()
+        {
+            return await All<Photo>();
         }
 
         private async Task Save<TTable>(TTable item)
@@ -79,11 +93,15 @@ namespace BeatThisBurger.Services
         }
 
 
-        public async Task SaveBurger(Place place, Burger burger, Rating rating)
+        public async Task SaveBurger(Place place, Burger burger, Rating rating, params Photo[] photos)
         {
             await Save(place);
             await Save(burger);
             await Save(rating);
+            foreach (var photo in photos)
+            {
+                await Save(photo);
+            }
             await Sync();
         }
     }
@@ -97,8 +115,9 @@ namespace BeatThisBurger.Services
 
         Task<Rating[]> Ratings();
 
+        Task<Photo[]> Photos();
 
-        Task SaveBurger(Place place, Burger burger, Rating rating);
+        Task SaveBurger(Place place, Burger burger, Rating rating, params Photo[] photos);
 
     }
 }

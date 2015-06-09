@@ -20,32 +20,32 @@ namespace BeatThisBurger.Service.Controllers
         }
 
         // GET tables/TEntity
-        public IQueryable<TEntity> GetAll()
+        public virtual IQueryable<TEntity> GetAll()
         {
             return Query();
         }
 
         // GET tables/TEntity/48D68C86-6EA6-4C25-AA33-223FC9A27959
-        public SingleResult<TEntity> Get(string id)
+        public virtual SingleResult<TEntity> Get(string id)
         {
             return Lookup(id);
         }
 
         // PATCH tables/TEntity/48D68C86-6EA6-4C25-AA33-223FC9A27959
-        public Task<TEntity> Patch(string id, Delta<TEntity> patch)
+        public virtual Task<TEntity> Patch(string id, Delta<TEntity> patch)
         {
             return UpdateAsync(id, patch);
         }
 
         // POST tables/TEntity
-        public async Task<IHttpActionResult> Post(TEntity item)
+        public virtual async Task<IHttpActionResult> Post(TEntity item)
         {
             TEntity current = await InsertAsync(item);
             return CreatedAtRoute("Tables", new { id = current.Id }, current);
         }
 
         // DELETE tables/TEntity/48D68C86-6EA6-4C25-AA33-223FC9A27959
-        public Task Delete(string id)
+        public virtual Task Delete(string id)
         {
             return DeleteAsync(id);
         }

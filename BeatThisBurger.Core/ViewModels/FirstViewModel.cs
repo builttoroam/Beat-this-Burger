@@ -23,6 +23,8 @@ namespace BeatThisBurger.ViewModels
 
         public ObservableCollection<Burger> Burgers { get; } = new ObservableCollection<Burger>();
 
+
+
         public async override void Start()
         {
             base.Start();

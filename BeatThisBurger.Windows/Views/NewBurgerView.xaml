@@ -94,6 +94,13 @@
             <Slider x:Name="S_Rating" Maximum="5" Minimum="0" SmallChange="0.5" LargeChange="1" Value="{Binding Rating.Value}"  RelativePanel.RightOf="T_Place" RelativePanel.Below="T_Ingredients" Width="400"/>
             <Button x:Name="B_Save"  Content="Save" Click="{x:Bind Data.ViewModel.SaveBurger}"  RelativePanel.Below="T_Rating" RelativePanel.LeftOf="B_Cancel" Margin="20,0"/>
             <Button Content="Cancel" Click="{x:Bind Data.ViewModel.CancelBurger}"  RelativePanel.Below="T_Rating" RelativePanel.RightOf="T_Place" x:Name="B_Cancel"/>
+
+            <Button Content="Take Photo"
+                    Click="TakePhotoClick"
+                    RelativePanel.Below="T_Rating"
+                    RelativePanel.RightOf="B_Cancel"
+                    x:Name="B_Photo" />
+
         </RelativePanel>
 
     </Grid>

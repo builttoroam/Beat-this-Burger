@@ -15,5 +15,7 @@ namespace BeatThisBurger.DataObjects
         public Place Place { get; set; }
 
         public virtual ICollection<Rating> Ratings { get; set; }
+
+        public virtual ICollection<Photo> Photos { get; set; }
     }
 }

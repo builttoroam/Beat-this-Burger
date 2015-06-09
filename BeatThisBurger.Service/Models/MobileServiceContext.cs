@@ -30,6 +30,7 @@ namespace BeatThisBurger.Service.Models
         public DbSet<Place> Places { get; set; }
         public DbSet<Burger> Burgers { get; set; }
         public DbSet<Rating> Ratings { get; set; }
+        public DbSet<Photo> Photos { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
