@@ -4,11 +4,15 @@
                       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
                       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
                       xmlns:views="using:Cirrious.MvvmCross.WindowsCommon.Views"
+                      xmlns:local="using:BeatThisBurger.DataObjects"
+                      xmlns:maps="using:Windows.UI.Xaml.Controls.Maps"
+                      xmlns:views1="using:BeatThisBurger.Views"
                       mc:Ignorable="d">
     <views:MvxWindowsPage.Resources>
-        <DataTemplate x:Key="BurgerTemplate">
+        <views1:LocationConverter x:Name="LocationConverter"/>
+        <DataTemplate x:Key="BurgerTemplate" x:DataType="local:Burger">
             <Grid Height="110"
-                  Width="480"
+                  Width="300"
                   Margin="10">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto" />
@@ -17,40 +21,29 @@
                 <Border Background="{StaticResource ListViewItemPlaceholderBackgroundThemeBrush}"
                         Width="110"
                         Height="110">
-                    <Image Height="110"
+                    <Image Height="110" Source="{x:Bind FirstPhoto}"
                            Width="110" />
                 </Border>
                 <StackPanel Grid.Column="1"
                             Margin="10,0,0,0">
-                    <TextBlock Text="{Binding Id}"
+                    <TextBlock Text="{x:Bind Name}"
                                Style="{StaticResource TitleTextBlockStyle}" />
-                    <TextBlock Text="{Binding Ingredients}"
+                    <TextBlock Text="{x:Bind Ingredients}"
                                Style="{StaticResource CaptionTextBlockStyle}"
-                               TextWrapping="NoWrap" />
+                               />
                 </StackPanel>
             </Grid>
         </DataTemplate>
         <DataTemplate x:Key="PlaceTemplate">
-            <Grid Height="110"
-                  Width="480"
+            <Grid Height="50"
                   Margin="10">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-                <Border Background="{StaticResource ListViewItemPlaceholderBackgroundThemeBrush}"
-                        Width="110"
-                        Height="110">
-                    <Image Height="110"
-                           Width="110" />
-                </Border>
                 <StackPanel Grid.Column="1"
                             Margin="10,0,0,0">
-                    <TextBlock Text="{Binding Address}"
+                    <TextBlock Text="{Binding Name}"
                                Style="{StaticResource TitleTextBlockStyle}" />
-                    <TextBlock Text="{Binding Id}"
+                    <TextBlock Text="{Binding Address}"
                                Style="{StaticResource CaptionTextBlockStyle}"
-                               TextWrapping="NoWrap" />
+                                />
                 </StackPanel>
             </Grid>
         </DataTemplate>
@@ -104,13 +97,18 @@
     </views:MvxWindowsPage.Resources>
 
     <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}"
-          d:DataContext="{d:DesignData /SampleData/FirstViewModelSampleData.xaml}">
+          
+          d:DataContext="{d:DesignData /SampleData/FirstViewModelSampleData.xaml}"
+          SizeChanged="Grid_SizeChanged">
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup x:Name="SortStates">
                 <VisualState x:Name="Places">
                     <VisualState.Setters>
-                        <Setter Target="LV_Places.(UIElement.Visibility)"
+                        <!--<Setter Target="LV_Places.(UIElement.Visibility)"
+                                Value="Visible" />-->
+                        <Setter Target="Map_Places.(UIElement.Visibility)"
                                 Value="Visible" />
+                        
                     </VisualState.Setters>
 
                 </VisualState>
@@ -143,6 +141,10 @@
                     <VisualState.Setters>
                         <Setter Target="SV_Menu.(SplitView.DisplayMode)"
                                 Value="CompactOverlay" />
+                        <Setter Target="B_ExpandInSV.(UIElement.Visibility)"
+                                Value="Visible" />
+                        <Setter Target="B_Expand.(UIElement.Visibility)"
+                                Value="Collapsed" />
                     </VisualState.Setters>
                 </VisualState>
                 <VisualState x:Name="Wide">
@@ -155,14 +157,29 @@
                                 Value="Inline" />
                         <Setter Target="SV_Menu.(SplitView.IsPaneOpen)"
                                 Value="true" />
+
+                        <Setter Target="B_Expand.(UIElement.Visibility)"
+                                Value="Collapsed" />
                     </VisualState.Setters>
                 </VisualState>
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
         <SplitView x:Name="SV_Menu"
+                       OpenPaneLength="300"
                    DisplayMode="Overlay">
-            <SplitView.Pane>
+            <SplitView.Pane >
                 <StackPanel x:Name="SP_Sort">
+
+                            <Button Click="ButtonBase_OnClick"
+                            Background="Transparent"
+                            x:Name="B_ExpandInSV"
+                            Visibility="Collapsed"
+                            BorderThickness="0">
+                        <Image x:Name="image"
+                               Source="ms-appx:///Assets/BurgerIcon.png"
+                               Width="30"
+                               Height="30" />
+                    </Button>
                     <RadioButton Checked="SortChanged"
                                  Style="{StaticResource MenuRadioButtonStyle}">Places</RadioButton>
                     <RadioButton Checked="SortChanged"
@@ -170,20 +187,47 @@
                 </StackPanel>
             </SplitView.Pane>
             <RelativePanel>
-                <ListView x:Name="LV_Burgers"
-                          Visibility="Collapsed"
+                <GridView x:Name="LV_Burgers"
+                            Visibility="Collapsed"
+                          RelativePanel.AlignLeftWithPanel="true"
                           RelativePanel.AlignTopWithPanel="true"
                           RelativePanel.AlignRightWithPanel="true"
                           RelativePanel.Above="BTN_NewBurger"
-                          Background="#FF18FF00"
+                          Background="PaleGreen"
                           ItemTemplate="{StaticResource BurgerTemplate}"
                           ItemsSource="{Binding Burgers}" />
+
+                <maps:MapControl x:Name="Map_Places"
+                                 Visibility="Collapsed"
+                                 RelativePanel.AlignLeftWithPanel="true"
+                                 RelativePanel.AlignTopWithPanel="true"
+                                 RelativePanel.AlignRightWithPanel="true"
+                                 RelativePanel.Above="BTN_NewBurger"
+                                 Background="PaleGoldenrod">
+                    <maps:MapItemsControl x:Name="MapItems" ItemsSource="{Binding Places}">
+                        <maps:MapItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Button  x:Name="mapItemButton"
+                                         Background="Transparent"
+                                         maps:MapControl.Location="{Binding Converter={StaticResource LocationConverter} }">
+                                    <StackPanel>
+                                        <Border Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+                                            <TextBlock Text="{Binding Name}" />
+                                        </Border>
+                                    </StackPanel>
+                                </Button>
+                            </DataTemplate>
+                        </maps:MapItemsControl.ItemTemplate>
+                    </maps:MapItemsControl>
+                </maps:MapControl>
+
                 <ListView x:Name="LV_Places"
                           Visibility="Collapsed"
+                          RelativePanel.AlignLeftWithPanel="true"
                           RelativePanel.AlignTopWithPanel="true"
                           RelativePanel.AlignRightWithPanel="true"
                           RelativePanel.Above="BTN_NewBurger"
-                          Background="Red"
+                          Background="PaleGoldenrod"
                           ItemTemplate="{StaticResource PlaceTemplate}"
                           ItemsSource="{Binding Places}" />
                 <Button x:Name="BTN_NewBurger"
@@ -191,9 +235,10 @@
                         RelativePanel.AlignHorizontalCenterWithPanel="true"
                         Click="{x:Bind Data.ViewModel.RecordNewBurger}">Add Burger</Button>
                 <Button x:Name="B_Expand"
-                        Click="ButtonBase_OnClick" Background="Transparent" BorderThickness="0" d:IsHidden="True">
-                    <Image x:Name="image" Source="ms-appx:///Assets/BurgerIcon.png" Width="50" Height="50"/>
+                        Click="ButtonBase_OnClick" Background="Transparent" BorderThickness="0">
+                    <Image  Source="ms-appx:///Assets/BurgerIcon.png" Width="30" Height="30"/>
                 </Button>
+                <!--<TextBlock x:Name="Size"  Foreground="Red" FontSize="70" />-->
                 <!--<RadioButton Checked="SortChanged" Style="{StaticResource MenuRadioButtonStyle}">Places</RadioButton>-->
             </RelativePanel>
         </SplitView>

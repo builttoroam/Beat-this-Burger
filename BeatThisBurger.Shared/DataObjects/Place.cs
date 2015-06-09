@@ -13,6 +13,14 @@ namespace BeatThisBurger.DataObjects
 
         public double? Longitude { get; set; }
 
+#if !SERVER
+        public void RefreshLocation()
+        {
+            RaisePropertyChanged(() => Latitude);
+            RaisePropertyChanged(()=>Longitude);
+        }
+#endif
+
         public virtual ICollection<Burger> Burgers { get; set; }
     }
 }

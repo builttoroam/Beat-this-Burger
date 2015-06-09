@@ -1,13 +1,16 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using Windows.Devices.Enumeration;
+using Windows.Devices.Geolocation;
 using Windows.Storage;
 using Windows.UI.Xaml;
 using BeatThisBurger.ViewModels;
 using Windows.Media.Capture;
 using Windows.Media.MediaProperties;
+using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -70,6 +73,55 @@ namespace BeatThisBurger.Views
             {
                 Debug.WriteLine("Exception when initializing MediaCapture with {0}", ex.ToString());
             }
+        }
+
+        protected async override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+
+
+            try
+            {
+                // Request permission to access location
+                var accessStatus = await Geolocator.RequestAccessAsync();
+
+                switch (accessStatus)
+                {
+                    case GeolocationAccessStatus.Allowed:
+
+                        // Get cancellation token
+                        var _cts = new CancellationTokenSource();
+                        CancellationToken token = _cts.Token;
+
+                        
+                        // If DesiredAccuracy or DesiredAccuracyInMeters are not set (or value is 0), DesiredAccuracy.Default is used.
+                        Geolocator geolocator = new Geolocator { DesiredAccuracyInMeters = 200};
+
+                        // Carry out the operation
+                        Geoposition pos = await geolocator.GetGeopositionAsync().AsTask(token);
+
+                        Data.ViewModel.Place.Latitude = pos.Coordinate.Point.Position.Latitude;
+                        Data.ViewModel.Place.Longitude= pos.Coordinate.Point.Position.Longitude;
+                        Data.ViewModel.Place.RefreshLocation();
+                            break;
+
+                    case GeolocationAccessStatus.Denied:
+                        break;
+
+                    case GeolocationAccessStatus.Unspecified:
+                        break;
+                }
+            }
+            catch (TaskCanceledException)
+            {
+            }
+            catch (Exception ex)
+            {
+            }
+            finally
+            {
+            }
+
         }
     }
 }

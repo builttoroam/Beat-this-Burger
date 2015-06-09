@@ -7,6 +7,7 @@ using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -39,6 +40,7 @@ namespace BeatThisBurger.Windows
 
             this.InitializeComponent();
             this.Suspending += OnSuspending;
+
         }
 
         /// <summary>
@@ -80,6 +82,8 @@ namespace BeatThisBurger.Windows
 
             // Ensure the current window is active
             Window.Current.Activate();
+
+            ApplicationView.GetForCurrentView().SetPreferredMinSize(new Size(300, 500));
         }
 
         private void EmptyFrameStartup(Frame rootFrame)

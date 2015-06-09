@@ -1,4 +1,5 @@
-﻿using Microsoft.Azure.Mobile.Server;
+﻿using System.Reflection;
+using Microsoft.Azure.Mobile.Server;
 
 namespace BeatThisBurger.DataObjects
 {
@@ -6,7 +7,8 @@ namespace BeatThisBurger.DataObjects
     {
         public string BurgerId { get; set; }
 
-        public double? Value { get; set; }
+
+        public double Rate { get; set; }
 
         public Burger Burger{ get; set; }
     }

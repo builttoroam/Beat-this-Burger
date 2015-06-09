@@ -1,4 +1,8 @@
 ﻿using System.Collections.Generic;
+#if SERVER
+using System.ComponentModel.DataAnnotations.Schema;
+#endif
+using System.Linq;
 using Microsoft.Azure.Mobile.Server;
 
 namespace BeatThisBurger.DataObjects
@@ -17,5 +21,10 @@ namespace BeatThisBurger.DataObjects
         public virtual ICollection<Rating> Ratings { get; set; }
 
         public virtual ICollection<Photo> Photos { get; set; }
+
+#if SERVER
+        [NotMapped]
+#endif
+        public string FirstPhoto => Photos?.FirstOrDefault()?.ImageUri??"ms-appx:///Assets/BurgerIcon.png";
     }
 }
