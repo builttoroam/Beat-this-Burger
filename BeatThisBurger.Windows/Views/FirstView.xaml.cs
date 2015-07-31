@@ -1,4 +1,7 @@
 using System;
+using System.Diagnostics;
+using System.Linq;
+using System.Threading.Tasks;
 using Windows.Devices.Geolocation;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -7,6 +10,7 @@ using Windows.UI.Xaml.Data;
 using BeatThisBurger.DataObjects;
 using BeatThisBurger.ViewModels;
 using Cirrious.MvvmCross.WindowsCommon.Views;
+using Microsoft.IdentityModel.Clients.ActiveDirectory;
 
 namespace BeatThisBurger.Views
 {
@@ -38,6 +42,12 @@ namespace BeatThisBurger.Views
             //Size.Text = e.NewSize.Width +"";
 
         }
+
+        private async void AuthenticateClick(object sender, RoutedEventArgs e)
+        {
+            await Data.ViewModel.Authenticate(new PlatformParameters(PromptBehavior.Always, false));
+        }
+
     }
 
     public class LocationConverter:IValueConverter

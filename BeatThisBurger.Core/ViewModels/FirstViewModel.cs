@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using BeatThisBurger.DataObjects;
 using BeatThisBurger.Services;
 using Cirrious.MvvmCross.ViewModels;
+using Microsoft.IdentityModel.Clients.ActiveDirectory;
 using Microsoft.WindowsAzure.MobileServices;
 
 namespace BeatThisBurger.ViewModels
@@ -49,5 +50,9 @@ namespace BeatThisBurger.ViewModels
             ShowViewModel<NewBurgerViewModel>();
         }
 
+        public async Task Authenticate(IPlatformParameters platformParameters)
+        {
+            await DataService.Authenticate(platformParameters);
+        }
     }
 }

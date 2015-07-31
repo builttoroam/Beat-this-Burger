@@ -1,20 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BeatThisBurger.DataObjects;
+using Microsoft.IdentityModel.Clients.ActiveDirectory;
 using Microsoft.WindowsAzure.MobileServices;
 using Microsoft.WindowsAzure.MobileServices.SQLiteStore;
 using Microsoft.WindowsAzure.MobileServices.Sync;
+using Newtonsoft.Json.Linq;
 
 namespace BeatThisBurger.Services
 {
     public class DataService : IDataService
     {
-        private MobileServiceClient MobileService { get; } = new MobileServiceClient(
+        private MobileServiceClient MobileService
+        { get; }
+        = new MobileServiceClient(
             Constants.MobileAppUrl,
-            Constants.GatewayUrl, 
+            Constants.GatewayUrl,
             Constants.ApplicationKey);
         private MobileServiceSQLiteStore Store { get; } = new MobileServiceSQLiteStore(Constants.LocalDatabaseFileName);
 
@@ -28,6 +33,42 @@ namespace BeatThisBurger.Services
             Store.DefineTable<Rating>();
             await MobileService.SyncContext.InitializeAsync(Store, new MobileServiceSyncHandler());
             HasInitialized = true;
+        }
+
+        public const string ADTenant = "beatthisburger.onmicrosoft.com";
+        public const string ADAuthority = "https://login.windows.net/" + ADTenant;
+
+        public const string ADNativeClientApplicationClientId = "ef447528-52c2-4c27-a18a-36baadb026c8";
+
+        public const string ADRedirectUri =
+            "https://beat-this-burger62614c1465f646c98f79d20e39610af3.azurewebsites.net/login/done";
+
+        public const string MobileServiceAppIdUri =
+            "https://beat-this-burger62614c1465f646c98f79d20e39610af3.azurewebsites.net/login/aad";
+
+        public async Task Authenticate(IPlatformParameters parameters)
+        {
+            try
+            {
+                var authContext = new AuthenticationContext(ADAuthority);
+
+
+                // TODO: Remove this - only here to force auth dialog for demo
+                //authContext.TokenCache.Clear();
+
+                var authResult = await authContext.AcquireTokenAsync(
+                    MobileServiceAppIdUri,
+                    ADNativeClientApplicationClientId,
+                    new Uri(ADRedirectUri), parameters);
+                Debug.WriteLine(authResult != null);
+
+                var jobj = new JObject {["access_token"] = authResult.AccessToken };
+                await MobileService.LoginAsync(MobileServiceAuthenticationProvider.WindowsAzureActiveDirectory, jobj);
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+            }
         }
 
 
@@ -119,5 +160,6 @@ namespace BeatThisBurger.Services
 
         Task SaveBurger(Place place, Burger burger, Rating rating, params Photo[] photos);
 
+        Task Authenticate(IPlatformParameters parameters);
     }
 }

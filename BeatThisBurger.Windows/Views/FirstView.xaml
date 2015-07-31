@@ -184,6 +184,8 @@
                                  Style="{StaticResource MenuRadioButtonStyle}">Places</RadioButton>
                     <RadioButton Checked="SortChanged"
                                  Style="{StaticResource MenuRadioButtonStyle}">Burgers</RadioButton>
+                    
+                    <Button Content="Authenticate" Click="AuthenticateClick"></Button>
                 </StackPanel>
             </SplitView.Pane>
             <RelativePanel>
